@@ -1,4 +1,4 @@
 {
-  "*.{ts,tsx,vue,css,scss}": "eslint --fix",
+  "*.{ts,tsx,vue,css,scss}": "eslint --fix --ignore-path .eslintrcignore",
   "*.{ts,tsx,vue,css,scss,md}": "prettier --write"
 }
