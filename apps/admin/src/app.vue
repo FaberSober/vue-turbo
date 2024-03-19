@@ -4,6 +4,6 @@ import { Button } from "@fa/ui";
 
 <template>
   <div>
-    <Button name="Hello"></Button>
+    <Button name="Hello1"></Button>
   </div>
 </template>
