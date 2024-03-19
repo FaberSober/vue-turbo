@@ -2,6 +2,8 @@
   "name": "vue-turbo",
   "private": true,
   "scripts": {
+    "preinstall": "npx only-allow pnpm",
+    "postinstall": "cd .. && husky install .husky",
     "build": "turbo run build",
     "dev": "turbo run dev",
     "lint": "turbo run lint",
