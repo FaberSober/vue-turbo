@@ -1,6 +1,6 @@
 {
-  "name": "ui",
-  "version": "0.0.0",
+  "name": "@fa/ui",
+  "version": "1.0.0",
   "private": true,
   "main": "./index.ts",
   "types": "./index.ts",
@@ -8,8 +8,8 @@
     "lint": "eslint ."
   },
   "devDependencies": {
-    "eslint-config-custom": "workspace:*",
-    "tsconfig": "workspace:*",
+    "@fa/eslint-config-custom": "workspace:*",
+    "@fa/tsconfig": "workspace:*",
     "vue": "^3.4.21"
   }
 }
