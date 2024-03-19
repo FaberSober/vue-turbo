@@ -17,7 +17,7 @@ pnpm build
 | 插件                                | 说明                | 官网                                                   |
 | :---------------------------------- | :------------------ | :----------------------------------------------------- |
 | vite                                | vitejs 构建         | https://www.vitejs.net/                                |
-| vite-plugin-pages                   | 目录路由生成        | https://github.com/hannoeru/vite-plugin-pages          |
+| unplugin-vue-router                 | 生成式路由          | https://github.com/posva/unplugin-vue-router           |
 | ❌react-router v6                   | 路由                | https://github.com/hannoeru/vite-plugin-pages          |
 | ❌antd                              | antd 前端组件       | https://ant-design.gitee.io/components/overview-cn/    |
 | ❌fa-cron-react-editor              | cron 编辑器         | https://github.com/xrutayisire/react-js-cron           |

@@ -7,6 +7,10 @@ build
 dist
 **/dist.zip
 
+## 路由
+typed-router.d.ts
+auto-imports.d.ts
+
 ## PNPM
 pnpm-lock.yaml
 
