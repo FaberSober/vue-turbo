@@ -1,7 +1,9 @@
 <script setup lang="ts">
-import { Page } from "ui";
+import { Button } from "ui";
 </script>
 
 <template>
-  <Page app-name="vue-turbo" />
+  <div>
+    <Button name="Hello"></Button>
+  </div>
 </template>
