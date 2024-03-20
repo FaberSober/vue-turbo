@@ -21,10 +21,10 @@ export default defineConfig({
           path: (file) => {
             const prefix = 'features'
             // +1 for the starting slash
-            console.log('👉 FILE', file)
+            // console.log('👉 FILE', file)
             file = file.slice(file.lastIndexOf(prefix) + prefix.length + 1);
             file = file.slice(file.indexOf('/'));
-            file = file.replace('/pages', '');
+            file = file.replace('/pages/', '');
             console.log('👉 FILE', file)
             return file
           },
