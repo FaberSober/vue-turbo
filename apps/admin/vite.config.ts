@@ -16,14 +16,15 @@ export default defineConfig({
           src: 'src/pages',
         },
         {
-          src: 'src/features',
+          src: 'features',
           filePatterns: '*/pages/**/*',
           path: (file) => {
-            const prefix = 'src/features'
+            const prefix = 'features'
             // +1 for the starting slash
-            file = file
-              .slice(file.lastIndexOf(prefix) + prefix.length + 1)
-              .replace('/pages', '')
+            console.log('👉 FILE', file)
+            file = file.slice(file.lastIndexOf(prefix) + prefix.length + 1);
+            file = file.slice(file.indexOf('/'));
+            file = file.replace('/pages', '');
             console.log('👉 FILE', file)
             return file
           },

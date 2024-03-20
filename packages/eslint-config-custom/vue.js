@@ -31,6 +31,7 @@ module.exports = {
   rules: {
     "import/no-default-export": "off",
     "vue/multi-word-component-names": "off",
+    "vue/no-multiple-template-root": "off",
     // add specific rules configurations here
   },
 };
