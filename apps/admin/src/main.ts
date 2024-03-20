@@ -1,6 +1,6 @@
 import { createApp } from 'vue';
-import App from './app.vue';
 import { createRouter, createWebHistory, DataLoaderPlugin } from 'vue-router/auto';
+import App from './app.vue';
 
 // 通用字体
 // import 'vfonts/Lato.css'
