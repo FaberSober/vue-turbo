@@ -17,7 +17,7 @@ pnpm build
 | 插件                                | 说明                | 官网                                                   |
 | :---------------------------------- | :------------------ | :----------------------------------------------------- |
 | vite                                | vitejs 构建         | https://www.vitejs.net/                                |
-| vue-router                   | 路由                | https://github.com/vuejs/router          |
+| vue-router                   | 路由                | https://router.vuejs.org/zh/          |
 | unplugin-vue-router                 | 生成式路由          | https://github.com/posva/unplugin-vue-router           |
 | naive-ui                              | naive-ui组件库       | https://www.naiveui.com/    |
 | vfonts                              | naive-ui推荐字体       | https://www.npmjs.com/package/vfonts    |
