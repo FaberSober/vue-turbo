@@ -18,6 +18,7 @@ pnpm build
 | :---------------------------------- | :------------------ | :----------------------------------------------------- |
 | vue3                                | vue3                | https://cn.vuejs.org/                                  |
 | vite                                | vitejs 构建         | https://www.vitejs.net/                                |
+| vite-plugin-vue-devtools            | 开发调试工具        | https://devtools-next.vuejs.org/                       |
 | vue-router                          | 路由                | https://router.vuejs.org/zh/                           |
 | unplugin-vue-router                 | 生成式路由          | https://github.com/posva/unplugin-vue-router           |
 | Pinia                               | 状态管理库          | https://pinia.vuejs.org/zh/                            |
@@ -50,6 +51,7 @@ pnpm i -D naive-ui --filter @fa/admin
 pnpm i -D vfonts --filter @fa/admin
 pnpm i -D xicons --filter @fa/admin
 pnpm i -D rollup-plugin-visualizer --filter @fa/admin
+pnpm i -D vite-plugin-vue-devtools --filter @fa/admin
 pnpm i -D eslint-plugin-import eslint-import-resolver-alias --filter @fa/admin
 pnpm i -D eslint-plugin-import eslint-import-resolver-typescript --filter @fa/admin
 ```

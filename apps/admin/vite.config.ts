@@ -2,6 +2,7 @@ import { fileURLToPath, URL } from 'node:url';
 import { defineConfig } from 'vite';
 import Vue from '@vitejs/plugin-vue';
 import VueRouter from 'unplugin-vue-router/vite'; // 生成式路由
+import VueDevTools from 'vite-plugin-vue-devtools';
 import { visualizer } from 'rollup-plugin-visualizer'; // 生成依赖图
 
 // https://vitejs.dev/config/
@@ -36,6 +37,7 @@ export default defineConfig({
     }),
     // ⚠️ Vue must be placed after VueRouter()
     Vue(),
+    VueDevTools(),
     visualizer({
       open: true, //注意这里要设置为true，否则无效
       // gzipSize: true,
