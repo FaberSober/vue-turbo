@@ -17,12 +17,12 @@ pnpm build
 | 插件                                | 说明                | 官网                                                   |
 | :---------------------------------- | :------------------ | :----------------------------------------------------- |
 | vite                                | vitejs 构建         | https://www.vitejs.net/                                |
+| vue-router                   | 路由                | https://github.com/vuejs/router          |
 | unplugin-vue-router                 | 生成式路由          | https://github.com/posva/unplugin-vue-router           |
-| ❌react-router v6                   | 路由                | https://github.com/hannoeru/vite-plugin-pages          |
-| ❌antd                              | antd 前端组件       | https://ant-design.gitee.io/components/overview-cn/    |
+| naive-ui                              | naive-ui组件库       | https://www.naiveui.com/    |
 | ❌fa-cron-react-editor              | cron 编辑器         | https://github.com/xrutayisire/react-js-cron           |
 | ❌use-bus                           | bus 事件通知        | https://github.com/fabienjuif/use-bus                  |
-| tailwindcss                         | tailwindcss         | https://tailwindcss.com                                |
+| ❌tailwindcss                         | tailwindcss         | https://tailwindcss.com                                |
 | ❌react-use                         | React Hooks — �     | https://github.com/streamich/react-use                 |
 | ❌ahooks                            | ahooks.js           | https://ahooks.js.org/                                 |
 | tinymce                             | 富文本编辑器        | https://github.com/tinymce/tinymce                     |
