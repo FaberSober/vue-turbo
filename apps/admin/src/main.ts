@@ -1,5 +1,6 @@
 import { createApp } from 'vue';
 import { createRouter, createWebHistory, DataLoaderPlugin } from 'vue-router/auto';
+import { createPinia } from 'pinia';
 import App from './app.vue';
 
 // 通用字体
@@ -14,10 +15,12 @@ const router = createRouter({
     return routes;
   },
 });
+const pinia = createPinia();
 
 const app = createApp(App);
 
 app.use(DataLoaderPlugin, { router });
 app.use(router);
+app.use(pinia);
 
 app.mount('#app');

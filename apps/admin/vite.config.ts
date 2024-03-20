@@ -17,27 +17,22 @@ export default defineConfig({
           src: 'src/pages',
         },
         {
-          src: 'features',
+          src: 'src/features',
           filePatterns: '*/pages/**/*',
           path: (file) => {
-            const prefix = 'features'
+            const prefix = 'features';
             // +1 for the starting slash
             // console.log('👉 FILE', file)
-            file = file.slice(file.lastIndexOf(prefix) + prefix.length + 1);
-            file = file.slice(file.indexOf('/'));
-            file = file.replace('/pages/', '');
-            console.log('👉 FILE', file)
-            return file
+            let file1 = file.slice(file.lastIndexOf(prefix) + prefix.length + 1);
+            file1 = file1.slice(file1.indexOf('/'));
+            file1 = file1.replace('/pages/', '');
+            console.log('👉 FILE', file1);
+            return file1;
           },
         },
       ],
       logs: true,
-      exclude: [
-        '**/ignored/**',
-        '**/__*',
-        '**/__**/*',
-        '**/*.component.vue',
-      ],
+      exclude: ['**/ignored/**', '**/__*', '**/__**/*', '**/*.component.vue'],
     }),
     // ⚠️ Vue must be placed after VueRouter()
     Vue(),

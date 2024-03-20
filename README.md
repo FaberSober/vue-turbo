@@ -16,9 +16,11 @@ pnpm build
 
 | 插件                                | 说明                | 官网                                                   |
 | :---------------------------------- | :------------------ | :----------------------------------------------------- |
+| vue3                                | vue3                | https://cn.vuejs.org/                                  |
 | vite                                | vitejs 构建         | https://www.vitejs.net/                                |
 | vue-router                          | 路由                | https://router.vuejs.org/zh/                           |
 | unplugin-vue-router                 | 生成式路由          | https://github.com/posva/unplugin-vue-router           |
+| Pinia                               | 状态管理库          | https://pinia.vuejs.org/zh/                            |
 | naive-ui                            | naive-ui组件库      | https://www.naiveui.com/                               |
 | vfonts                              | naive-ui推荐字体    | https://www.npmjs.com/package/vfonts                   |
 | xicons                              | naive-ui推荐图标    | https://www.xicons.org/                                |
@@ -41,8 +43,12 @@ pnpm build
 ## 安装依赖包
 
 ```
+pnpm i pinia --filter @fa/admin
+
 pnpm i -D naive-ui --filter @fa/admin
 pnpm i -D vfonts --filter @fa/admin
 pnpm i -D xicons --filter @fa/admin
 pnpm i -D rollup-plugin-visualizer --filter @fa/admin
+pnpm i -D eslint-plugin-import eslint-import-resolver-alias --filter @fa/admin
+pnpm i -D eslint-plugin-import eslint-import-resolver-typescript --filter @fa/admin
 ```

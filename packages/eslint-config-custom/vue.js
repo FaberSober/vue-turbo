@@ -19,11 +19,23 @@ module.exports = {
   parserOptions: {
     ecmaVersion: "latest",
   },
+  
   settings: {
     "import/resolver": {
+      // FIXME: https://github.com/import-js/eslint-plugin-import/issues/2301
+      // error  Unable to resolve path to module '@/features/fa-admin/stores/counter'  import/no-unresolved
+      // alias: {
+      //   map: [
+      //     ['@', './src'],
+      //   ],
+      //   // "extensions": [".js", ".ts", ".jsx", ".vue"]
+      // },
       typescript: {
         project,
       },
+      // node: {
+      //   project,
+      // },
     },
   },
   ignorePatterns: ["node_modules/", "dist/", ".eslintrc.js"],
@@ -33,7 +45,10 @@ module.exports = {
     "vue/multi-word-component-names": "off",
     "vue/no-multiple-template-root": "off",
     //关闭组件命名规则
-    "vue/multi-word-component-names":"off",
+    "vue/multi-word-component-names": "off",
+    "no-console": "off",
+    // ignore配置vite配置的别名，临时办法
+    "import/no-unresolved": [2, {"ignore": ["@"]}],
     // add specific rules configurations here
   },
 };

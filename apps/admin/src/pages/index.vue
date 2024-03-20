@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import { useRouter, useRoute } from 'vue-router/auto';
+import { useRouter } from 'vue-router/auto';
 
 const router = useRouter();
 router.push('/admin');
