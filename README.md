@@ -24,6 +24,7 @@ pnpm build
 | naive-ui                            | naive-ui组件库      | https://www.naiveui.com/                               |
 | vfonts                              | naive-ui推荐字体    | https://www.npmjs.com/package/vfonts                   |
 | xicons                              | naive-ui推荐图标    | https://www.xicons.org/                                |
+| scss                                | scss                |                                                        |
 | ❌fa-cron-react-editor              | cron 编辑器         | https://github.com/xrutayisire/react-js-cron           |
 | ❌use-bus                           | bus 事件通知        | https://github.com/fabienjuif/use-bus                  |
 | ❌tailwindcss                       | tailwindcss         | https://tailwindcss.com                                |

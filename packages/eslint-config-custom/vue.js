@@ -48,7 +48,7 @@ module.exports = {
     "vue/multi-word-component-names": "off",
     "no-console": "off",
     // ignore配置vite配置的别名，临时办法
-    "import/no-unresolved": [2, {"ignore": ["@"]}],
+    "import/no-unresolved": [2, {"ignore": ["@/"]}],
     // add specific rules configurations here
   },
 };
