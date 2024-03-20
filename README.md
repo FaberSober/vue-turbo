@@ -43,4 +43,5 @@ pnpm build
 pnpm i -D naive-ui --filter @fa/admin
 pnpm i -D vfonts --filter @fa/admin
 pnpm i -D xicons --filter @fa/admin
+pnpm i -D rollup-plugin-visualizer --filter @fa/admin
 ```
