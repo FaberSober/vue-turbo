@@ -59,6 +59,7 @@ pnpm i -D vfonts --filter @fa/admin
 pnpm i -D xicons --filter @fa/admin
 pnpm i -D sass --filter @fa/admin
 pnpm i -D postcss --filter @fa/admin
+pnpm i -D @vitejs/plugin-vue-jsx --filter @fa/admin
 
 pnpm i -D rollup-plugin-visualizer --filter @fa/admin
 pnpm i -D vite-plugin-vue-devtools --filter @fa/admin
