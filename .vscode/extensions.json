@@ -2,12 +2,12 @@
   "recommendations": [
     "vue.volar",
     "dbaeumer.vscode-eslint",
-    // "stylelint.vscode-stylelint",
+    "stylelint.vscode-stylelint",
     "esbenp.prettier-vscode",
-    // "mrmlnc.vscode-less",
-    // "lokalise.i18n-ally",
-    // "antfu.iconify",
+    "mrmlnc.vscode-scss",
+    "lokalise.i18n-ally",
+    "antfu.iconify",
     "mikestead.dotenv",
-    "heybourn.headwind"
+    // "heybourn.headwind"
   ]
 }
