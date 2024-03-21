@@ -52,6 +52,9 @@ pnpm i -D vfonts --filter @fa/admin
 pnpm i -D xicons --filter @fa/admin
 pnpm i -D rollup-plugin-visualizer --filter @fa/admin
 pnpm i -D vite-plugin-vue-devtools --filter @fa/admin
+pnpm i -D @vue/eslint-config-prettier --filter @fa/admin
+pnpm i -D @vercel/style-guide --filter @fa/admin
+
 pnpm i -D eslint-plugin-import eslint-import-resolver-alias --filter @fa/admin
 pnpm i -D eslint-plugin-import eslint-import-resolver-typescript --filter @fa/admin
 ```
