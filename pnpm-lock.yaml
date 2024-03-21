@@ -81,12 +81,6 @@ importers:
       sass:
         specifier: ^1.72.0
         version: 1.72.0
-      stylelint:
-        specifier: ^16.2.1
-        version: 16.2.1(typescript@5.3.3)
-      stylelint-config-standard-scss:
-        specifier: ^13.0.0
-        version: 13.0.0(postcss@8.4.35)(stylelint@16.2.1)
       typescript:
         specifier: ~5.3.3
         version: 5.3.3
@@ -190,6 +184,9 @@ importers:
       eslint-config-turbo:
         specifier: ^1.12.4
         version: 1.12.4(eslint@8.57.0)
+      stylelint-config-standard-scss:
+        specifier: ^13.0.0
+        version: 13.0.0(postcss@8.4.35)(stylelint@16.2.1)
       typescript:
         specifier: ^5.3.3
         version: 5.3.3

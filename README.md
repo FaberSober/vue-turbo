@@ -22,6 +22,8 @@ pnpm build
 | vue-router                          | 路由                | https://router.vuejs.org/zh/                           |
 | unplugin-vue-router                 | 生成式路由          | https://github.com/posva/unplugin-vue-router           |
 | Pinia                               | 状态管理库          | https://pinia.vuejs.org/zh/                            |
+| eslint                              | 代码检查            | https://eslint.org/                                    |
+| stylelint                           | CSS代码检查         | https://stylelint.io/                                  |
 | naive-ui                            | naive-ui组件库      | https://www.naiveui.com/                               |
 | vfonts                              | naive-ui推荐字体    | https://www.npmjs.com/package/vfonts                   |
 | xicons                              | naive-ui推荐图标    | https://www.xicons.org/                                |
