@@ -109,61 +109,6 @@ importers:
         specifier: ^1.0.0
         version: 1.0.0
 
-  apps/example:
-    dependencies:
-      '@fa/core':
-        specifier: workspace:*
-        version: link:../../packages/core
-      '@fa/ui':
-        specifier: workspace:*
-        version: link:../../packages/ui
-      vue:
-        specifier: ^3.4.21
-        version: 3.4.21(typescript@5.3.3)
-    devDependencies:
-      '@fa/eslint-config-custom':
-        specifier: workspace:*
-        version: link:../../packages/eslint-config-custom
-      '@fa/tsconfig':
-        specifier: workspace:*
-        version: link:../../packages/tsconfig
-      '@rushstack/eslint-patch':
-        specifier: ^1.7.2
-        version: 1.7.2
-      '@tsconfig/node18':
-        specifier: ^18.2.2
-        version: 18.2.2
-      '@types/node':
-        specifier: ^20.11.24
-        version: 20.11.24
-      '@vitejs/plugin-vue':
-        specifier: ^5.0.4
-        version: 5.0.4(vite@5.1.4)(vue@3.4.21)
-      eslint:
-        specifier: ^8.57.0
-        version: 8.57.0
-      eslint-plugin-vue:
-        specifier: ^9.22.0
-        version: 9.22.0(eslint@8.57.0)
-      npm-run-all2:
-        specifier: ^6.1.2
-        version: 6.1.2
-      typescript:
-        specifier: ~5.3.3
-        version: 5.3.3
-      unplugin-vue-router:
-        specifier: ^0.8.5
-        version: 0.8.5(vue-router@4.3.0)(vue@3.4.21)
-      vite:
-        specifier: ^5.1.4
-        version: 5.1.4(@types/node@20.11.24)(sass@1.72.0)
-      vue-router:
-        specifier: ^4.3.0
-        version: 4.3.0(vue@3.4.21)
-      vue-tsc:
-        specifier: ^2.0.4
-        version: 2.0.4(typescript@5.3.3)
-
   packages/core:
     devDependencies:
       '@fa/eslint-config-custom':

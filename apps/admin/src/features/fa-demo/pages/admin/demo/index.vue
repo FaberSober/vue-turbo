@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import { NButton } from 'naive-ui';
+import { NButton, NDatePicker } from 'naive-ui';
 import styles from './demo.module.scss';
 import '@/styles/demo.scss';
 
@@ -16,6 +16,8 @@ console.log('styles', styles);
     <div :class="styles.demoText2">SCSS样式测试（局部）</div>
 
     <div class="demo-text-global">SCSS样式测试（全局）</div>
+
+    <n-date-picker type="date" />
   </main>
 </template>
 
