@@ -25,7 +25,8 @@ pnpm build
 | naive-ui                            | naive-ui组件库      | https://www.naiveui.com/                               |
 | vfonts                              | naive-ui推荐字体    | https://www.npmjs.com/package/vfonts                   |
 | xicons                              | naive-ui推荐图标    | https://www.xicons.org/                                |
-| scss                                | scss                |                                                        |
+| sass                                | sass样式            | https://github.com/sass/dart-sass                      |
+| postcss                             | JS插件转换样式      | https://github.com/postcss/postcss                     |
 | ❌fa-cron-react-editor              | cron 编辑器         | https://github.com/xrutayisire/react-js-cron           |
 | ❌use-bus                           | bus 事件通知        | https://github.com/fabienjuif/use-bus                  |
 | ❌tailwindcss                       | tailwindcss         | https://tailwindcss.com                                |
@@ -45,15 +46,24 @@ pnpm build
 ## 安装依赖包
 
 ```
+# 工作空间安装
+pnpm i -D stylelint -w
+
+# 指定模块安装
 pnpm i pinia --filter @fa/admin
 
 pnpm i -D naive-ui --filter @fa/admin
 pnpm i -D vfonts --filter @fa/admin
 pnpm i -D xicons --filter @fa/admin
+pnpm i -D sass --filter @fa/admin
+pnpm i -D postcss --filter @fa/admin
+
 pnpm i -D rollup-plugin-visualizer --filter @fa/admin
 pnpm i -D vite-plugin-vue-devtools --filter @fa/admin
 pnpm i -D @vue/eslint-config-prettier --filter @fa/admin
 pnpm i -D @vercel/style-guide --filter @fa/admin
+
+pnpm i -D stylelint stylelint-config-standard-scss --filter @fa/admin
 
 pnpm i -D eslint-plugin-import eslint-import-resolver-alias --filter @fa/admin
 pnpm i -D eslint-plugin-import eslint-import-resolver-typescript --filter @fa/admin

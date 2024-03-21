@@ -44,6 +44,16 @@ export default defineConfig({
       // brotliSize: true,
     }),
   ],
+  //* css模块化
+  css: {
+    modules: {
+      scopeBehaviour: 'local',
+      generateScopedName: '[name]__[local]___[hash:base64:5]',
+      // globalModulePaths: [/\.global\.(css|scss)$/],
+      hashPrefix: 'prefix',
+      localsConvention: 'camelCaseOnly',
+    },
+  },
   resolve: {
     alias: {
       '@': fileURLToPath(new URL('./src', import.meta.url)),
