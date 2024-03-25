@@ -32,7 +32,7 @@ pnpm build
 | ❌fa-cron-react-editor              | cron 编辑器         | https://github.com/xrutayisire/react-js-cron           |
 | ❌use-bus                           | bus 事件通知        | https://github.com/fabienjuif/use-bus                  |
 | ❌tailwindcss                       | tailwindcss         | https://tailwindcss.com                                |
-| ❌react-use                         | React Hooks — �     | https://github.com/streamich/react-use                 |
+| vueuse                              | vue use库           | https://vueuse.org/                                    |
 | ❌ahooks                            | ahooks.js           | https://ahooks.js.org/                                 |
 | tinymce                             | 富文本编辑器        | https://github.com/tinymce/tinymce                     |
 | ❌fontawesome                       | 图标库              | https://fontawesome.com/                               |
@@ -53,6 +53,7 @@ pnpm i -D stylelint -w
 
 # 指定模块安装
 pnpm i pinia --filter @fa/admin
+pnpm i @vueuse/core --filter @fa/admin
 
 pnpm i -D naive-ui --filter @fa/admin
 pnpm i -D vfonts --filter @fa/admin
