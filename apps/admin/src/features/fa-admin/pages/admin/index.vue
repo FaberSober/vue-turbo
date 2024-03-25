@@ -2,7 +2,7 @@
 import { NButton, NSwitch } from 'naive-ui';
 import '@/styles/demo.scss';
 
-import { useThemeStore } from '@/features/fa-admin/stores/useThemeStore';
+import { useThemeStore } from '@/features/fa-admin/stores/theme';
 
 const theme = useThemeStore();
 </script>
