@@ -72,3 +72,9 @@ pnpm i -D stylelint stylelint-config-standard-scss --filter @fa/admin
 pnpm i -D eslint-plugin-import eslint-import-resolver-alias --filter @fa/admin
 pnpm i -D eslint-plugin-import eslint-import-resolver-typescript --filter @fa/admin
 ```
+
+# 优秀开源项目
+
+| 名称          | 官网                                       |
+| :------------ | :----------------------------------------- |
+| soybean-admin | https://github.com/soybeanjs/soybean-admin |
