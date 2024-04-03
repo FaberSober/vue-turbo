@@ -1,5 +1,4 @@
 <script lang="ts" setup>
-import { NButton, NDatePicker } from 'naive-ui';
 import styles from './demo.module.scss';
 import '@/styles/demo.scss';
 

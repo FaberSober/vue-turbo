@@ -1,5 +1,4 @@
 <script lang="ts" setup>
-import { NButton } from 'naive-ui';
 import { useCounterStore } from '@/features/fa-admin/stores/counter';
 
 const counter = useCounterStore();

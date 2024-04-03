@@ -7,11 +7,14 @@ export {}
 
 declare module 'vue' {
   export interface GlobalComponents {
-    NDialogProvider: (typeof import('naive-ui'))['NDialogProvider'];
-    NLoadingBarProvider: (typeof import('naive-ui'))['NLoadingBarProvider'];
-    NMessageProvider: (typeof import('naive-ui'))['NMessageProvider'];
-    NNotificationProvider: (typeof import('naive-ui'))['NNotificationProvider'];
-    RouterLink: (typeof import('vue-router'))['RouterLink'];
-    RouterView: (typeof import('vue-router'))['RouterView'];
+    AppProvider: typeof import('./../features/fa-admin/components/common/app-provider.vue')['default']
+    NButton: typeof import('naive-ui')['NButton']
+    NDialogProvider: typeof import('naive-ui')['NDialogProvider']
+    NLoadingBarProvider: typeof import('naive-ui')['NLoadingBarProvider']
+    NMessageProvider: typeof import('naive-ui')['NMessageProvider']
+    NNotificationProvider: typeof import('naive-ui')['NNotificationProvider']
+    NSwitch: typeof import('naive-ui')['NSwitch']
+    RouterLink: typeof import('vue-router')['RouterLink']
+    RouterView: typeof import('vue-router')['RouterView']
   }
 }

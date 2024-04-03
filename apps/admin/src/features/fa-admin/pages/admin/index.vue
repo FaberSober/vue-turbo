@@ -1,5 +1,4 @@
 <script lang="ts" setup>
-import { NButton, NSwitch } from 'naive-ui';
 import '@/styles/demo.scss';
 
 import { useThemeStore } from '@/features/fa-admin/stores/theme';
