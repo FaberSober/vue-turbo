@@ -10,6 +10,7 @@ dist
 ## 路由
 typed-router.d.ts
 auto-imports.d.ts
+**/typings/*.ts
 
 ## PNPM
 pnpm-lock.yaml
