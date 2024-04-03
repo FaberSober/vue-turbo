@@ -2,6 +2,7 @@ import { fileURLToPath, URL } from 'node:url';
 import { defineConfig } from 'vite';
 import Vue from '@vitejs/plugin-vue';
 import VueRouter from 'unplugin-vue-router/vite'; // 生成式路由
+import Components from 'unplugin-vue-components/vite'; // 组件按需导入
 import VueJsx from '@vitejs/plugin-vue-jsx';
 import VueDevTools from 'vite-plugin-vue-devtools';
 import { visualizer } from 'rollup-plugin-visualizer'; // 生成依赖图
@@ -40,6 +41,9 @@ export default defineConfig({
     Vue(),
     VueJsx(),
     VueDevTools(),
+    Components({
+      dts: 'src/typings/components.d.ts',
+    }),
     visualizer({
       open: true, //注意这里要设置为true，否则无效
       // gzipSize: true,
