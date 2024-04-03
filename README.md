@@ -30,6 +30,7 @@ pnpm build
 | xicons                              | naive-ui推荐图标      | https://www.xicons.org/                                |
 | sass                                | sass样式              | https://github.com/sass/dart-sass                      |
 | postcss                             | JS插件转换样式        | https://github.com/postcss/postcss                     |
+| nprogress                           | 进度条                | https://github.com/rstacruz/nprogress                  |
 | ❌fa-cron-react-editor              | cron 编辑器           | https://github.com/xrutayisire/react-js-cron           |
 | ❌use-bus                           | bus 事件通知          | https://github.com/fabienjuif/use-bus                  |
 | ❌tailwindcss                       | tailwindcss           | https://tailwindcss.com                                |
@@ -55,6 +56,7 @@ pnpm i -D stylelint -w
 # 指定模块安装
 pnpm i pinia --filter @fa/admin
 pnpm i @vueuse/core --filter @fa/admin
+pnpm i nprogress --filter @fa/admin
 
 pnpm i -D naive-ui --filter @fa/admin
 pnpm i -D vfonts --filter @fa/admin
@@ -63,6 +65,7 @@ pnpm i -D sass --filter @fa/admin
 pnpm i -D postcss --filter @fa/admin
 pnpm i -D @vitejs/plugin-vue-jsx --filter @fa/admin
 pnpm i -D unplugin-vue-components --filter @fa/admin
+pnpm i -D @types/nprogress --filter @fa/admin
 
 pnpm i -D rollup-plugin-visualizer --filter @fa/admin
 pnpm i -D vite-plugin-vue-devtools --filter @fa/admin

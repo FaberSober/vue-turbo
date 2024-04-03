@@ -16,6 +16,7 @@
     "@fa/ui": "workspace:*",
     "@fa/utils": "workspace:*",
     "@vueuse/core": "^10.9.0",
+    "nprogress": "^0.2.0",
     "pinia": "^2.1.7",
     "vue": "^3.4.21"
   },
@@ -25,6 +26,7 @@
     "@rushstack/eslint-patch": "^1.7.2",
     "@tsconfig/node18": "^18.2.2",
     "@types/node": "^20.11.24",
+    "@types/nprogress": "^0.2.3",
     "@vitejs/plugin-vue": "^5.0.4",
     "@vitejs/plugin-vue-jsx": "^3.1.0",
     "eslint": "^8.57.0",
