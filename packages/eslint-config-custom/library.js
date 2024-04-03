@@ -31,4 +31,14 @@ module.exports = {
     },
   },
   ignorePatterns: ["node_modules/", "dist/"],
+
+  rules: {
+    "import/no-default-export": "off",
+    "no-console": "off",
+    "@typescript-eslint/no-explicit-any": "off",
+    "@typescript-eslint/no-unsafe-assignment": "off",
+    // ignore配置vite配置的别名，临时办法
+    // "import/no-unresolved": [2, {"ignore": ["@/"]}],
+    // add specific rules configurations here
+  },
 };

@@ -1,10 +1,20 @@
 <script setup lang="ts">
-import { NConfigProvider } from 'naive-ui';
+import { computed } from 'vue';
+import { NConfigProvider, darkTheme } from 'naive-ui';
 import { zhCN, dateZhCN } from 'naive-ui';
+import { useThemeStore } from '@/features/fa-admin/stores/theme';
+
+defineOptions({
+  name: 'App',
+});
+
+const themeStore = useThemeStore();
+
+const naiveDarkTheme = computed(() => (themeStore.light ? undefined : darkTheme));
 </script>
 
 <template>
-  <n-config-provider :locale="zhCN" :date-locale="dateZhCN">
+  <NConfigProvider :theme="naiveDarkTheme" :locale="zhCN" :date-locale="dateZhCN" class="h-full bg-layout">
     <RouterView />
-  </n-config-provider>
+  </NConfigProvider>
 </template>

@@ -11,6 +11,7 @@
     "format": "prettier --write \"**/*.{ts,tsx,md}\""
   },
   "devDependencies": {
+    "@fa/eslint-config-custom": "workspace:*",
     "@fa/tsconfig": "workspace:*",
     "eslint": "^8.57.0",
     "husky": "8.0.3",

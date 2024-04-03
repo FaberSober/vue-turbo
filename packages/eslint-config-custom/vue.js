@@ -39,6 +39,8 @@ module.exports = {
     "vue/multi-word-component-names": "off", //关闭组件命名规则
     "vue/no-multiple-template-root": "off",
     "no-console": "off",
+    "@typescript-eslint/no-explicit-any": "off",
+    "@typescript-eslint/no-unsafe-assignment": "off",
     // ignore配置vite配置的别名，临时办法
     // "import/no-unresolved": [2, {"ignore": ["@/"]}],
     // add specific rules configurations here
