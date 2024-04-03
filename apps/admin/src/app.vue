@@ -15,6 +15,8 @@ const naiveDarkTheme = computed(() => (themeStore.light ? undefined : darkTheme)
 
 <template>
   <NConfigProvider :theme="naiveDarkTheme" :locale="zhCN" :date-locale="dateZhCN" class="h-full bg-layout">
-    <RouterView />
+    <AppProvider>
+      <RouterView />
+    </AppProvider>
   </NConfigProvider>
 </template>

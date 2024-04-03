@@ -1,6 +1,6 @@
 import { createApp } from 'vue';
 // 引入全局样式
-// import '@/features/fa-admin/plugins/assets'
+import '@/features/fa-admin/plugins/assets';
 import { createRouter, createWebHistory, DataLoaderPlugin } from 'vue-router/auto';
 import { createPinia } from 'pinia';
 import NProgress from 'nprogress';

@@ -52,6 +52,7 @@ pnpm build
 ```
 # 工作空间安装
 pnpm i -D stylelint -w
+pnpm i -D stylelint-scss -w
 
 # 指定模块安装
 pnpm i pinia --filter @fa/admin
