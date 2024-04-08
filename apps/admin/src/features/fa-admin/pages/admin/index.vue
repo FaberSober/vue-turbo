@@ -1,6 +1,4 @@
 <script lang="ts" setup>
-import '@/styles/demo.scss';
-
 import { useThemeStore } from '@/features/fa-admin/stores/theme';
 
 const theme = useThemeStore();

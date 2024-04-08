@@ -1,6 +1,6 @@
 <script lang="ts" setup>
 import styles from './demo.module.scss';
-import '@/styles/demo.scss';
+import '@/features/fa-demo/styles/demo.scss';
 
 console.log('styles', styles);
 </script>

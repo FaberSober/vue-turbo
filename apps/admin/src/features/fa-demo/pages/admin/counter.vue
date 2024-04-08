@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import { useCounterStore } from '@/features/fa-admin/stores/counter';
+import { useCounterStore } from '@/features/fa-demo/stores/counter';
 
 const counter = useCounterStore();
 counter.count++;
