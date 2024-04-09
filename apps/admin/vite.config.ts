@@ -6,8 +6,8 @@ import Components from 'unplugin-vue-components/vite'; // 组件按需导入
 import AutoImport from 'unplugin-auto-import/vite'; // API按需导入
 import { VueRouterAutoImports } from 'unplugin-vue-router'; // API按需导入-router
 import { NaiveUiResolver } from 'unplugin-vue-components/resolvers'; // 组件按需导入-NaiveUi解析器
-import VueJsx from '@vitejs/plugin-vue-jsx';
-import VueDevTools from 'vite-plugin-vue-devtools';
+import VueJsx from '@vitejs/plugin-vue-jsx'; // JSX语法支持
+import VueDevTools from 'vite-plugin-vue-devtools'; // 开发工具
 import { visualizer } from 'rollup-plugin-visualizer'; // 生成依赖图
 
 // https://vitejs.dev/config/
@@ -49,7 +49,14 @@ export default defineConfig({
       eslintrc: {
         enabled: true, // <-- this
       },
-      imports: [VueRouterAutoImports],
+      imports: [
+        'vue',
+        // 'vue-router', // 使用unplugin-vue-router，需要屏蔽此preset预设项
+        VueRouterAutoImports,
+        'pinia',
+        // custom
+        '@vueuse/core',
+      ],
     }),
     Components({
       dts: 'src/typings/components.d.ts',
