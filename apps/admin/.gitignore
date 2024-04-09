@@ -30,3 +30,5 @@ coverage
 # 路由
 # typed-router.d.ts
 # auto-imports.d.ts
+
+stats.html

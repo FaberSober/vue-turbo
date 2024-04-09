@@ -46,9 +46,6 @@ export default defineConfig({
     VueDevTools(), // Vue开发工具
     AutoImport({
       dts: './auto-imports.d.ts',
-      eslintrc: {
-        enabled: true, // <-- this
-      },
       imports: [
         'vue',
         // 'vue-router', // 使用unplugin-vue-router，需要屏蔽此preset预设项
@@ -57,6 +54,9 @@ export default defineConfig({
         // custom
         '@vueuse/core',
       ],
+      eslintrc: {
+        enabled: true, // <-- this
+      },
     }),
     Components({
       dts: 'src/typings/components.d.ts',
