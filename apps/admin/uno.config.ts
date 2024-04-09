@@ -1,8 +1,6 @@
 import { defineConfig } from 'unocss/vite';
-import transformerDirectives from '@unocss/transformer-directives';
-import transformerVariantGroup from '@unocss/transformer-variant-group';
-import presetUno from '@unocss/preset-uno';
-import type { Theme } from '@unocss/preset-uno';
+import { transformerDirectives, transformerVariantGroup, presetUno } from 'unocss';
+import type { Theme } from 'unocss/preset-uno';
 import { presetSoybeanAdmin } from '@fa/uno-preset';
 // import { themeVars } from './src/theme/vars';
 
