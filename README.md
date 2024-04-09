@@ -22,6 +22,8 @@ pnpm build
 | vue-router                          | 路由                  | https://router.vuejs.org/zh/                           |
 | unplugin-vue-router                 | 生成式路由            | https://github.com/posva/unplugin-vue-router           |
 | unplugin-vue-components             | Vue的按需组件自动导入 | https://github.com/unplugin/unplugin-vue-components    |
+| unplugin-auto-import                | API按需导入           | https://github.com/unplugin/unplugin-auto-import       |
+| unplugin-icons                      | Icon按需导入          | https://github.com/unplugin/unplugin-icons             |
 | Pinia                               | 状态管理库            | https://pinia.vuejs.org/zh/                            |
 | eslint                              | 代码检查              | https://eslint.org/                                    |
 | stylelint                           | CSS代码检查           | https://stylelint.io/                                  |
@@ -67,6 +69,7 @@ pnpm i -D postcss --filter @fa/admin
 pnpm i -D @vitejs/plugin-vue-jsx --filter @fa/admin
 pnpm i -D unplugin-vue-components --filter @fa/admin
 pnpm i -D @types/nprogress --filter @fa/admin
+pnpm i -D unplugin-auto-import --filter @fa/admin
 
 pnpm i -D rollup-plugin-visualizer --filter @fa/admin
 pnpm i -D vite-plugin-vue-devtools --filter @fa/admin

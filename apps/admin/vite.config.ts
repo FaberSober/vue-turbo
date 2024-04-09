@@ -3,7 +3,9 @@ import { defineConfig } from 'vite';
 import Vue from '@vitejs/plugin-vue';
 import VueRouter from 'unplugin-vue-router/vite'; // 生成式路由
 import Components from 'unplugin-vue-components/vite'; // 组件按需导入
-import { NaiveUiResolver } from 'unplugin-vue-components/resolvers';
+import AutoImport from 'unplugin-auto-import/vite'; // API按需导入
+import { VueRouterAutoImports } from 'unplugin-vue-router'; // API按需导入-router
+import { NaiveUiResolver } from 'unplugin-vue-components/resolvers'; // 组件按需导入-NaiveUi解析器
 import VueJsx from '@vitejs/plugin-vue-jsx';
 import VueDevTools from 'vite-plugin-vue-devtools';
 import { visualizer } from 'rollup-plugin-visualizer'; // 生成依赖图
@@ -37,21 +39,28 @@ export default defineConfig({
       ],
       logs: true,
       exclude: ['**/ignored/**', '**/__*', '**/__**/*', '**/*.component.vue'],
-    }),
+    }), // 生成式路由
     // ⚠️ Vue must be placed after VueRouter()
-    Vue(),
-    VueJsx(),
-    VueDevTools(),
+    Vue(), // Vue
+    VueJsx(), // 支持JSX语法
+    VueDevTools(), // Vue开发工具
+    AutoImport({
+      dts: './auto-imports.d.ts',
+      eslintrc: {
+        enabled: true, // <-- this
+      },
+      imports: [VueRouterAutoImports],
+    }),
     Components({
       dts: 'src/typings/components.d.ts',
       dirs: ['src/features/*/components'],
       resolvers: [NaiveUiResolver()],
-    }),
+    }), // 组件按需引入，配置后，dirs目录中的组件会被自动按需引入
     visualizer({
       open: true, //注意这里要设置为true，否则无效
       // gzipSize: true,
       // brotliSize: true,
-    }),
+    }), // 打包依赖图
   ],
   //* css模块化
   css: {

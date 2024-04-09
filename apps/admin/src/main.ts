@@ -5,6 +5,7 @@ import { createRouter, createWebHistory, DataLoaderPlugin } from 'vue-router/aut
 import { createPinia } from 'pinia';
 import NProgress from 'nprogress';
 import App from './app.vue';
+import { setupRouter } from '@/router';
 
 // 通用字体
 // import 'vfonts/Lato.css'
@@ -18,19 +19,12 @@ import App from './app.vue';
   window.NProgress = NProgress;
 }
 
-const router = createRouter({
-  history: createWebHistory(),
-  extendRoutes: (routes) => {
-    // routes.find((r) => r.name === '/')!.meta = {}
-    return routes;
-  },
-});
 const pinia = createPinia();
 
 const app = createApp(App);
 
-app.use(DataLoaderPlugin, { router });
-app.use(router);
+await setupRouter(app);
+
 app.use(pinia);
 
 app.mount('#app');
