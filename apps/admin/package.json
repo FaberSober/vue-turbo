@@ -12,13 +12,16 @@
     "lint-style": "stylelint \"**/*.(css|scss)\""
   },
   "dependencies": {
+    "@fa/color-palette": "workspace:*",
     "@fa/core": "workspace:*",
     "@fa/ui": "workspace:*",
     "@fa/utils": "workspace:*",
     "@vueuse/core": "^10.9.0",
+    "dayjs": "^1.11.10",
     "nprogress": "^0.2.0",
     "pinia": "^2.1.7",
-    "vue": "^3.4.21"
+    "vue": "^3.4.21",
+    "vue-i18n": "^9.11.0"
   },
   "devDependencies": {
     "@fa/eslint-config-custom": "workspace:*",
@@ -41,6 +44,7 @@
     "unplugin-vue-router": "^0.8.5",
     "vfonts": "^0.0.3",
     "vite": "^5.1.4",
+    "vite-plugin-progress": "^0.0.7",
     "vite-plugin-vue-devtools": "^7.0.19",
     "vue-router": "^4.3.0",
     "vue-tsc": "^2.0.4",

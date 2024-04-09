@@ -9,6 +9,7 @@ import { NaiveUiResolver } from 'unplugin-vue-components/resolvers'; // 组件�
 import VueJsx from '@vitejs/plugin-vue-jsx'; // JSX语法支持
 import VueDevTools from 'vite-plugin-vue-devtools'; // 开发工具
 import { visualizer } from 'rollup-plugin-visualizer'; // 生成依赖图
+import progress from 'vite-plugin-progress'; // 打包进度条
 
 // https://vitejs.dev/config/
 export default defineConfig({
@@ -68,6 +69,7 @@ export default defineConfig({
       // gzipSize: true,
       // brotliSize: true,
     }), // 打包依赖图
+    progress(),
   ],
   //* css模块化
   css: {

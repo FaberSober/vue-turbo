@@ -11,9 +11,9 @@ export const router = createRouter({
 });
 
 /** Setup Vue Router */
-export function setupRouter(app: App) {
+export async function setupRouter(app: App) {
   app.use(DataLoaderPlugin, { router });
   app.use(router);
   // createRouterGuard(router);
-  router.isReady();
+  await router.isReady();
 }
