@@ -14,7 +14,9 @@
     "moduleResolution": "Bundler",
     "types": [
       // ...
-      "unplugin-vue-router/client"
+      "unplugin-vue-router/client",
+      "unplugin-icons/types/vue",
+      "naive-ui/volar"
     ],
   }
 }

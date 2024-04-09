@@ -25,6 +25,7 @@ pnpm build
 | unplugin-vue-components             | Vue的按需组件自动导入  | https://github.com/unplugin/unplugin-vue-components    |
 | unplugin-auto-import                | API按需导入            | https://github.com/unplugin/unplugin-auto-import       |
 | unplugin-icons                      | Icon按需导入           | https://github.com/unplugin/unplugin-icons             |
+| @iconify/json                       | Icon图标数据           |                                                        |
 | Pinia                               | 状态管理库             | https://pinia.vuejs.org/zh/                            |
 | eslint                              | 代码检查               | https://eslint.org/                                    |
 | stylelint                           | CSS代码检查            | https://stylelint.io/                                  |
@@ -37,6 +38,8 @@ pnpm build
 | dayjs                               | 日期库                 |                                                        |
 | vite-plugin-progress                | vite打包展示进度条插件 | https://github.com/jeddygong/vite-plugin-progress      |
 | colord                              | 色彩工具               | https://github.com/omgovich/colord                     |
+| unocss                              | CSS引擎                | https://unocss.dev/                                    |
+| @iconify/vue                        | 图标库                 | https://iconify.design/                                |
 | ❌fa-cron-react-editor              | cron 编辑器            | https://github.com/xrutayisire/react-js-cron           |
 | ❌use-bus                           | bus 事件通知           | https://github.com/fabienjuif/use-bus                  |
 | ❌tailwindcss                       | tailwindcss            | https://tailwindcss.com                                |
@@ -76,7 +79,11 @@ pnpm i -D @vitejs/plugin-vue-jsx --filter @fa/admin
 pnpm i -D unplugin-vue-components --filter @fa/admin
 pnpm i -D @types/nprogress --filter @fa/admin
 pnpm i -D unplugin-auto-import --filter @fa/admin
+pnpm i -D unplugin-icons --filter @fa/admin
+pnpm i -D @iconify/json --filter @fa/admin
+pnpm i -D @iconify/utils --filter @fa/admin
 pnpm i -D vite-plugin-progress --filter @fa/admin
+pnpm i -D unocss --filter @fa/admin
 
 pnpm i -D rollup-plugin-visualizer --filter @fa/admin
 pnpm i -D vite-plugin-vue-devtools --filter @fa/admin
