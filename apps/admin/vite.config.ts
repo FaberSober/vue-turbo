@@ -14,7 +14,7 @@ import { visualizer } from 'rollup-plugin-visualizer'; // 生成依赖图
 import progress from 'vite-plugin-progress'; // 打包进度条
 import process from 'node:process';
 import dayjs from 'dayjs';
-import { setupUnocss } from './build/unocss';
+import { setupUnocss } from './build/plugins/unocss';
 import path from 'node:path';
 
 // https://vitejs.dev/config/
