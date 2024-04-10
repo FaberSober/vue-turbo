@@ -1,1 +1,1 @@
-export { default as FButton } from './button/button.vue';
+export { default as FaButton } from './button/button.vue';

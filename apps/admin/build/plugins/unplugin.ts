@@ -51,10 +51,10 @@ export function setupUnplugin(viteEnv: Env.ImportMeta) {
       dirs: ['src/features/*/components'],
       resolvers: [
         // importing @fa/ui auto
-        (componentName) => {
-          // where `componentName` is always CapitalCase
-          if (componentName.startsWith('Fa'))
-            return { name: componentName, from: '@fa/ui' }
+        (name) => {
+          // where component `name` is always start with `Fa`
+          if (name.startsWith('Fa'))
+            return { name, from: '@fa/ui' }
         },
         NaiveUiResolver(),
       ],
