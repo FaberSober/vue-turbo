@@ -26,5 +26,7 @@ declare module 'vue-router/auto-routes' {
     '/admin/demo/': RouteRecordInfo<'/admin/demo/', '/admin/demo', Record<never, never>, Record<never, never>>,
     '/admin/demo/hello': RouteRecordInfo<'/admin/demo/hello', '/admin/demo/hello', Record<never, never>, Record<never, never>>,
     '/exception/403': RouteRecordInfo<'/exception/403', '/exception/403', Record<never, never>, Record<never, never>>,
+    '/exception/404': RouteRecordInfo<'/exception/404', '/exception/404', Record<never, never>, Record<never, never>>,
+    '/exception/500': RouteRecordInfo<'/exception/500', '/exception/500', Record<never, never>, Record<never, never>>,
   }
 }
