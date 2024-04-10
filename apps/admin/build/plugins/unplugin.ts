@@ -1,4 +1,6 @@
+import process from 'node:process';
 import path from 'node:path';
+import type { PluginOption } from 'vite';
 import AutoImport from "unplugin-auto-import/vite"; // API按需导入
 import { VueRouterAutoImports } from "unplugin-vue-router"; // API按需导入-router
 import Icons from "unplugin-icons/vite"; // Icon图标按需导入

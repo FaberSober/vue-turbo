@@ -1,7 +1,7 @@
 // @unocss-include
 import { getRgbOfColor } from '@fa/utils';
-import { $t } from '@/locales';
-import { localStg } from '@/utils/storage';
+import { $t } from '../locales';
+import { localStg } from '@/features/fa-admin/utils/storage';
 import systemLogo from '@/assets/svg-icon/logo.svg?raw';
 
 export function setupLoading() {

@@ -2,11 +2,11 @@
 import { useCounterStore } from '@/features/fa-demo/stores/counter';
 
 const counter = useCounterStore();
-counter.count++;
+// counter.count++;
 // 自动补全！ ✨
-counter.$patch({ count: counter.count + 1 });
+// counter.$patch({ count: counter.count + 1 });
 // 或使用 action 代替
-counter.increment();
+// counter.increment();
 </script>
 
 <template>

@@ -1,6 +1,9 @@
 import type { LocationQueryRaw, NavigationGuardNext, RouteLocationNormalized, RouteLocationRaw, Router } from 'vue-router';
-import type { RouteKey, RoutePath } from '@elegant-router/types';
-import { localStg } from '@/utils/storage';
+// import type { RouteKey, RoutePath } from '@elegant-router/types';
+import { localStg } from '@/features/fa-admin/utils/storage';
+
+type RouteKey = string;
+type RoutePath = string;
 
 /**
  * create route guard
@@ -32,7 +35,7 @@ export function createRouteGuard(router: Router) {
     // const isLogin = Boolean(localStg.get('token'));
     const isLogin = true;
     const needLogin = !to.meta.constant;
-    const routeRoles = to.meta.roles || [];
+    const routeRoles = (to.meta.roles || []) as string[];
 
     const hasRole = authStore.userInfo.roles.some((role) => routeRoles.includes(role));
 
@@ -100,7 +103,7 @@ async function initRoute(to: RouteLocationNormalized): Promise<RouteLocationRaw 
       return Promise.resolve();
     },
     isInitAuthRoute: true,
-    getIsAuthRouteExist: () => {
+    getIsAuthRouteExist: (path: RoutePath) => {
       return Promise.resolve(true);
     },
   };
@@ -196,7 +199,7 @@ async function initRoute(to: RouteLocationNormalized): Promise<RouteLocationRaw 
 function handleRouteSwitch(to: RouteLocationNormalized, from: RouteLocationNormalized, next: NavigationGuardNext) {
   // route with href
   if (to.meta?.href) {
-    window.open(to.meta.href, '_blank');
+    window.open(to.meta.href as string, '_blank');
 
     next({ path: from.fullPath, replace: true, query: from.query, hash: to.hash });
 

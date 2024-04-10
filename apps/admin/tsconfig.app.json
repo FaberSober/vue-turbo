@@ -1,6 +1,6 @@
 {
   "extends": "@fa/tsconfig/vue.json",
-  "include": ["env.d.ts", "src/**/*.ts", "src/**/*.vue", "./vite.config.ts", "./typed-router.d.ts", "./auto-imports.d.ts"],
+  "include": ["src/**/*.ts", "src/**/*.vue", "src/**/*.tsx", "build/**/*.ts", "./vite.config.ts", "env.d.ts", "./typed-router.d.ts", "./auto-imports.d.ts"],
   "exclude": ["src/**/__tests__/*"],
   "compilerOptions": {
     "composite": true,
@@ -13,7 +13,8 @@
     "allowJs": true,
     "moduleResolution": "Bundler",
     "types": [
-      // ...
+      "vite/client",
+      "node",
       "unplugin-vue-router/client",
       "unplugin-icons/types/vue",
       "naive-ui/volar"

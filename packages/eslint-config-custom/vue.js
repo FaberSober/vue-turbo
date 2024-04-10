@@ -1,6 +1,6 @@
-const { resolve } = require("node:path");
+// const { resolve } = require("node:path");
 
-const project = resolve(process.cwd(), "tsconfig.json");
+// const project = resolve(process.cwd(), "tsconfig.json");
 
 
 module.exports = {
@@ -13,7 +13,7 @@ module.exports = {
     ecmaVersion: "latest",
     // project,
   },
-  
+
   // settings: {
   //   "import/resolver": {
   //     // FIXME: https://github.com/import-js/eslint-plugin-import/issues/2301
