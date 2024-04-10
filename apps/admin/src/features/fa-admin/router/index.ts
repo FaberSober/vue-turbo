@@ -1,4 +1,5 @@
 import type { App } from 'vue';
+import type { Router } from 'vue-router';
 import { createRouter, createWebHistory, DataLoaderPlugin } from 'vue-router/auto';
 import { createRouterGuard } from './guard';
 
@@ -8,7 +9,7 @@ export const router = createRouter({
   extendRoutes: (routes) => {
     // 这里可以给每个route添加meta额外的数据属性，如：权限、菜单名称编码（用编码转国际化）等信息
     // routes.find((r) => r.name === '/')!.meta = { flag: '/' }
-    // console.log('extendRoutes', routes)
+    console.log('extendRoutes', routes);
     return routes;
   },
 });
@@ -19,6 +20,6 @@ export async function setupRouter(app: App) {
   // app.use(DataLoaderPlugin, { router });
 
   app.use(router);
-  createRouterGuard(router);
+  createRouterGuard(router as Router);
   await router.isReady();
 }

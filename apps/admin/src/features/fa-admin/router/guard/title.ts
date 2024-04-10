@@ -1,6 +1,6 @@
 import { useTitle } from '@vueuse/core';
 import type { Router } from 'vue-router';
-import { $t } from '@/locales';
+import { $t } from '@/features/fa-admin/locales';
 
 /**
  * create document title guard
@@ -10,8 +10,8 @@ export function createDocumentTitleGuard(router: Router) {
   router.afterEach((to) => {
     const { i18nKey, title = 'title not set' } = to.meta;
 
-    const documentTitle = i18nKey ? $t(i18nKey) : title;
+    const documentTitle = i18nKey ? $t(i18nKey as any) : title;
 
-    useTitle(documentTitle);
+    useTitle(documentTitle as string);
   });
 }

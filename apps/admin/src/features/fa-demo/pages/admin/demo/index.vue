@@ -1,4 +1,10 @@
 <script lang="ts" setup>
+definePage({
+  meta: {
+    requiresAuth: true,
+  },
+});
+
 import styles from './demo.module.scss';
 import '@/features/fa-demo/styles/demo.scss';
 
