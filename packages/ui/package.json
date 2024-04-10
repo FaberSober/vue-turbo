@@ -10,6 +10,7 @@
   "devDependencies": {
     "@fa/eslint-config-custom": "workspace:*",
     "@fa/tsconfig": "workspace:*",
-    "vue": "^3.4.21"
+    "vue": "^3.4.21",
+    "@iconify/vue": "4.1.1"
   }
 }

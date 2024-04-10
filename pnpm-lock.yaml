@@ -213,6 +213,9 @@ importers:
       '@fa/tsconfig':
         specifier: workspace:*
         version: link:../tsconfig
+      '@iconify/vue':
+        specifier: 4.1.1
+        version: 4.1.1(vue@3.4.21)
       vue:
         specifier: ^3.4.21
         version: 3.4.21(typescript@5.3.3)
@@ -1158,7 +1161,6 @@ packages:
     dependencies:
       '@iconify/types': 2.0.0
       vue: 3.4.21(typescript@5.3.3)
-    dev: false
 
   /@intlify/core-base@9.11.0:
     resolution: {integrity: sha512-cveOqAstjLZIiyatcP/HrzrQ87cZI8ScPQna3yvoM8zjcjcIRK1MRvmxUNlPdg0rTNJMZw7rixPVM58O5aHVPA==}
