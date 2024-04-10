@@ -20,7 +20,7 @@ pnpm build
 | vite                                | vitejs 构建            | https://www.vitejs.net/                                |
 | vite-plugin-vue-devtools            | 开发调试工具           | https://devtools-next.vuejs.org/                       |
 | vue-router                          | 路由                   | https://router.vuejs.org/zh/                           |
-| vue-i18n                            | 国际化                 | https://github.com/intlify/vue-i18n-next               |
+| vue-i18n                            | i18n国际化             | https://github.com/intlify/vue-i18n-next               |
 | unplugin-vue-router                 | 生成式路由             | https://github.com/posva/unplugin-vue-router           |
 | unplugin-vue-components             | Vue的按需组件自动导入  | https://github.com/unplugin/unplugin-vue-components    |
 | unplugin-auto-import                | API按需导入            | https://github.com/unplugin/unplugin-auto-import       |
