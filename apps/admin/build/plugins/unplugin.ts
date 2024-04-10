@@ -7,6 +7,8 @@ import Icons from "unplugin-icons/vite"; // Icon图标按需导入
 import { FileSystemIconLoader } from "unplugin-icons/loaders"; // Icon图标按需导入
 import Components from "unplugin-vue-components/vite"; // 组件按需导入
 import { NaiveUiResolver } from "unplugin-vue-components/resolvers"; // 组件按需导入-NaiveUi解析器
+import { createSvgIconsPlugin } from 'vite-plugin-svg-icons'; // 生产svg雪碧图
+
 
 /**
  * 设置unplugin按需自动导入差价合集
@@ -61,6 +63,16 @@ export function setupUnplugin(viteEnv: Env.ImportMeta) {
         NaiveUiResolver(),
       ],
     }), // 组件按需引入，配置后，dirs目录中的组件会被自动按需引入
+    createSvgIconsPlugin({
+      // 指定需要缓存的图标文件夹
+      iconDirs: [localIconPath],
+      // 指定symbolId格式
+      symbolId: `${VITE_ICON_LOCAL_PREFIX}-[dir]-[name]`,
+      // 自定义插入位置
+      inject: 'body-last',
+      // custom dom id
+      customDomId: '__SVG_ICON_LOCAL__'
+    }), // svg雪碧图
   ]
 
   return plugins;

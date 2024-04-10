@@ -11,9 +11,13 @@ defineOptions({ name: 'SvgIcon', inheritAttrs: false });
  * - If icon and localIcon are passed at the same time, localIcon will be rendered first
  */
 interface Props {
-  /** Iconify icon name */
+  /**
+   * Iconify icon name.
+   */
   icon?: string;
-  /** Local svg icon name */
+  /**
+   * Local svg icon name.  使用src/assets/svg-icon目录的svg文件名，如：activity
+   */
   localIcon?: string;
 }
 

@@ -1,4 +1,4 @@
-import type { App } from 'vue';
+import type { App as VueApp } from 'vue';
 import { createI18n } from 'vue-i18n';
 import { localStg } from '@/features/fa-admin/utils/storage';
 import messages from './locale';
@@ -15,7 +15,7 @@ const i18n = createI18n({
  *
  * @param app
  */
-export function setupI18n(app: App) {
+export function setupI18n(app: VueApp) {
   app.use(i18n);
 }
 

@@ -21,6 +21,7 @@ pnpm build
 | vite-plugin-vue-devtools            | 开发调试工具           | https://devtools-next.vuejs.org/                       |
 | vue-router                          | 路由                   | https://router.vuejs.org/zh/                           |
 | vue-i18n                            | i18n国际化             | https://github.com/intlify/vue-i18n-next               |
+| vite-plugin-svg-icons               | 生成 svg 雪碧图        | https://github.com/vbenjs/vite-plugin-svg-icons        |
 | unplugin-vue-router                 | 生成式路由             | https://github.com/posva/unplugin-vue-router           |
 | unplugin-vue-components             | Vue的按需组件自动导入  | https://github.com/unplugin/unplugin-vue-components    |
 | unplugin-auto-import                | API按需导入            | https://github.com/unplugin/unplugin-auto-import       |
@@ -84,6 +85,7 @@ pnpm i -D @iconify/json --filter @fa/admin
 pnpm i -D @iconify/utils --filter @fa/admin
 pnpm i -D vite-plugin-progress --filter @fa/admin
 pnpm i -D unocss --filter @fa/admin
+pnpm i -D vite-plugin-svg-icons --filter @fa/admin
 
 pnpm i -D rollup-plugin-visualizer --filter @fa/admin
 pnpm i -D vite-plugin-vue-devtools --filter @fa/admin

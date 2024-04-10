@@ -26,6 +26,11 @@ console.log('styles', styles);
     <n-date-picker type="date" />
 
     <FaButton name="hello" />
+
+    <span>使用svg图标</span>
+    <div class="flex text-100px text-primary">
+      <FaSvgIcon local-icon="avatar" />
+    </div>
   </main>
 </template>
 

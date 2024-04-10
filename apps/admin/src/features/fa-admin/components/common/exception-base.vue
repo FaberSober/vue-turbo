@@ -33,7 +33,7 @@ const icon = computed(() => iconMap[props.type]);
     <div class="flex text-400px text-primary">
       <FaSvgIcon :local-icon="icon" />
     </div>
-    <NButton type="primary" @click="$router.push('admin')">{{ $t('common.backToHome') }}</NButton>
+    <NButton type="primary" @click="$router.push('/admin')">{{ $t('common.backToHome') }}</NButton>
   </div>
 </template>
 
