@@ -7,6 +7,7 @@ definePage({
 
 import styles from './demo.module.scss';
 import '@/features/fa-demo/styles/demo.scss';
+// import { FaButton } from '@fa/ui'
 
 console.log('styles', styles);
 </script>
@@ -23,6 +24,8 @@ console.log('styles', styles);
     <div class="demo-text-global">SCSS样式测试（全局）</div>
 
     <n-date-picker type="date" />
+
+    <FaButton name="hello" />
   </main>
 </template>
 

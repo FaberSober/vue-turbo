@@ -49,7 +49,15 @@ export function setupUnplugin(viteEnv: Env.ImportMeta) {
     Components({
       dts: 'src/typings/components.d.ts',
       dirs: ['src/features/*/components'],
-      resolvers: [NaiveUiResolver()],
+      resolvers: [
+        // importing @fa/ui auto
+        (componentName) => {
+          // where `componentName` is always CapitalCase
+          if (componentName.startsWith('Fa'))
+            return { name: componentName, from: '@fa/ui' }
+        },
+        NaiveUiResolver(),
+      ],
     }), // 组件按需引入，配置后，dirs目录中的组件会被自动按需引入
   ]
 

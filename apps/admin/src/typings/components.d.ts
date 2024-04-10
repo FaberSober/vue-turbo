@@ -8,6 +8,7 @@ export {}
 declare module 'vue' {
   export interface GlobalComponents {
     AppProvider: typeof import('./../features/fa-admin/components/common/app-provider.vue')['default']
+    FaButton: typeof import('@fa/ui')['FaButton']
     NButton: typeof import('naive-ui')['NButton']
     NDatePicker: typeof import('naive-ui')['NDatePicker']
     NDialogProvider: typeof import('naive-ui')['NDialogProvider']
