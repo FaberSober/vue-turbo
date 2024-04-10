@@ -16,6 +16,8 @@ const theme = useThemeStore();
 
     <h3>主题</h3>
     <NSwitch v-model:value="theme.light"></NSwitch>
+
+    <NButton @click="() => $router.push('/admin/counter')">to /counter</NButton>
   </main>
 </template>
 
