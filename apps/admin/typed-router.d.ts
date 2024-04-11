@@ -28,5 +28,8 @@ declare module 'vue-router/auto-routes' {
     '/exception/403': RouteRecordInfo<'/exception/403', '/exception/403', Record<never, never>, Record<never, never>>,
     '/exception/404': RouteRecordInfo<'/exception/404', '/exception/404', Record<never, never>, Record<never, never>>,
     '/exception/500': RouteRecordInfo<'/exception/500', '/exception/500', Record<never, never>, Record<never, never>>,
+    '/login': RouteRecordInfo<'/login', '/login', Record<never, never>, Record<never, never>>,
+    '/login/': RouteRecordInfo<'/login/', '/login', Record<never, never>, Record<never, never>>,
+    '/login/pwd-login': RouteRecordInfo<'/login/pwd-login', '/login/pwd-login', Record<never, never>, Record<never, never>>,
   }
 }

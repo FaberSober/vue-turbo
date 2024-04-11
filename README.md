@@ -43,13 +43,11 @@ pnpm build
 | @iconify/vue                        | 图标库                 | https://iconify.design/                                |
 | ❌fa-cron-react-editor              | cron 编辑器            | https://github.com/xrutayisire/react-js-cron           |
 | ❌use-bus                           | bus 事件通知           | https://github.com/fabienjuif/use-bus                  |
-| ❌tailwindcss                       | tailwindcss            | https://tailwindcss.com                                |
 | vueuse                              | vue use库              | https://vueuse.org/                                    |
-| ❌ahooks                            | ahooks.js              | https://ahooks.js.org/                                 |
 | tinymce                             | 富文本编辑器           | https://github.com/tinymce/tinymce                     |
 | ❌fontawesome                       | 图标库                 | https://fontawesome.com/                               |
 | ❌dnd-kit                           | 拖动库                 | https://dndkit.com/                                    |
-| ❌tree-node-cli                     | list dir as tree       | https://github.com/yangshun/tree-node-cli              |
+| tree-node-cli                       | list dir as tree       | https://github.com/yangshun/tree-node-cli              |
 | ❌react-grid-layout                 | 网格布局               | https://github.com/react-grid-layout/react-grid-layout |
 | ❌@react-pdf-viewer                 | pdf 查看               | https://github.com/react-grid-layout/react-grid-layout |
 | ❌@onlyoffice/document-editor-react | office 文件在线编辑    | https://api.onlyoffice.com/                            |

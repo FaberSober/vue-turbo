@@ -2,8 +2,10 @@
 
 ## 路由跳转
 
-```vue
-import { useRouter, useRoute } from 'vue-router/auto'; const router = useRouter(); router.push('');
+```typescript
+import { useRouter, useRoute } from 'vue-router/auto';
+const router = useRouter();
+router.push('');
 ```
 
 ```vue

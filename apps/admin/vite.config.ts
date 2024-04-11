@@ -46,5 +46,8 @@ export default defineConfig((configEnv) => {
     define: {
       BUILD_TIME: JSON.stringify(buildTime),
     },
+    server: {
+      open: true,
+    },
   };
 });
