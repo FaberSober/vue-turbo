@@ -1,8 +1,7 @@
 import { colord, extend } from 'colord';
 import namesPlugin from 'colord/plugins/names';
 import mixPlugin from 'colord/plugins/mix';
-import type { AnyColor, HsvColor, RgbColor } from 'colord';
-import type { RgbaColor } from 'colord/types';
+import type { AnyColor, HsvColor, RgbColor, RgbaColor } from 'colord';
 
 extend([namesPlugin, mixPlugin]);
 

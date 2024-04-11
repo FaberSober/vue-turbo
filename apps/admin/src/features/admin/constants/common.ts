@@ -1,4 +1,4 @@
-import { transformRecordToOption } from '@/utils/common';
+import { transformRecordToOption } from '@f/admin/utils/common';
 
 export const yesOrNoRecord: Record<CommonType.YesOrNo, App.I18n.I18nKey> = {
   Y: 'common.yesOrNo.yes',

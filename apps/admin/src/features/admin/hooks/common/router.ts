@@ -1,5 +1,5 @@
-import { useRouter } from 'vue-router';
-import type { RouteLocationRaw } from 'vue-router';
+import { useRouter } from 'vue-router/auto';
+// import type { RouteLocationRaw } from 'vue-router';
 import { router as globalRouter } from '@f/admin/router';
 
 /**
@@ -25,7 +25,8 @@ export function useRouterPush(inSetup = true) {
   async function routerPushByKey(key: string, options?: RouterPushOptions) {
     const { query, params } = options || {};
 
-    const routeLocation: RouteLocationRaw = {
+    // const routeLocation: RouteLocationRaw = { // FIXME 这里的ts类型有问题
+    const routeLocation: any = {
       name: key,
     };
 

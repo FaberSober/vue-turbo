@@ -1,4 +1,4 @@
-import { transformRecordToOption } from '@/utils/common';
+import { transformRecordToOption } from '@f/admin/utils/common';
 
 export const enableStatusRecord: Record<Api.Common.EnableStatus, App.I18n.I18nKey> = {
   '1': 'page.manage.common.status.enable',
