@@ -7,12 +7,12 @@ export {}
 
 declare module 'vue' {
   export interface GlobalComponents {
-    AppProvider: typeof import('./../features/fa-admin/components/common/app-provider.vue')['default']
-    ButtonIcon: typeof import('./../features/fa-admin/components/custom/button-icon.vue')['default']
-    ExceptionBase: typeof import('./../features/fa-admin/components/common/exception-base.vue')['default']
+    AppProvider: typeof import('./../features/admin/components/common/app-provider.vue')['default']
+    ButtonIcon: typeof import('./../features/admin/components/custom/button-icon.vue')['default']
+    ExceptionBase: typeof import('./../features/admin/components/common/exception-base.vue')['default']
     FaButton: typeof import('@fa/ui')['FaButton']
     FaSvgIcon: typeof import('@fa/ui')['FaSvgIcon']
-    LangSwitch: typeof import('./../features/fa-admin/components/common/lang-switch.vue')['default']
+    LangSwitch: typeof import('./../features/admin/components/common/lang-switch.vue')['default']
     NButton: typeof import('naive-ui')['NButton']
     NCard: typeof import('naive-ui')['NCard']
     NDatePicker: typeof import('naive-ui')['NDatePicker']
@@ -25,6 +25,6 @@ declare module 'vue' {
     NTooltip: typeof import('naive-ui')['NTooltip']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
-    ThemeSchemaSwitch: typeof import('./../features/fa-admin/components/common/theme-schema-switch.vue')['default']
+    ThemeSchemaSwitch: typeof import('./../features/admin/components/common/theme-schema-switch.vue')['default']
   }
 }

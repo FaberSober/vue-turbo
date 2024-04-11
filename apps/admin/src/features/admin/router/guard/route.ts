@@ -1,6 +1,6 @@
 import type { LocationQueryRaw, NavigationGuardNext, RouteLocationNormalized, RouteLocationRaw, Router } from 'vue-router';
 // import type { RouteKey, RoutePath } from '@elegant-router/types';
-import { localStg } from '@/features/fa-admin/utils/storage';
+import { localStg } from '@/features/admin/utils/storage';
 
 type RouteKey = string;
 type RoutePath = string;

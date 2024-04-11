@@ -1,1 +1,1 @@
-export * from '@/features/fa-admin/locales';
+export * from '@/features/admin/locales';

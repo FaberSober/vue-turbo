@@ -1,6 +1,6 @@
 import type { App as VueApp } from 'vue';
 import { createI18n } from 'vue-i18n';
-import { localStg } from '@/features/fa-admin/utils/storage';
+import { localStg } from '@/features/admin/utils/storage';
 import messages from './locale';
 
 const i18n = createI18n({

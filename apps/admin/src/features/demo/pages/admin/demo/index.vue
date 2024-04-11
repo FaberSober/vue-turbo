@@ -6,7 +6,7 @@ definePage({
 });
 
 import styles from './demo.module.scss';
-import '@/features/fa-demo/styles/demo.scss';
+import '@/features/demo/styles/demo.scss';
 // import { FaButton } from '@fa/ui'; // 使用unplugin-vue-components支持自定义导入了
 
 console.log('styles', styles);

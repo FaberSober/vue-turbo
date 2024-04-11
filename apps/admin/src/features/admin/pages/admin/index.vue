@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import { useThemeStore } from '@/features/fa-admin/stores/theme';
+import { useThemeStore } from '@/features/admin/stores/theme';
 
 const theme = useThemeStore();
 </script>
