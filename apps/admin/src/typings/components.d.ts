@@ -12,6 +12,7 @@ declare module 'vue' {
     ExceptionBase: typeof import('./../features/admin/components/common/exception-base.vue')['default']
     FaButton: typeof import('@fa/ui')['FaButton']
     FaSvgIcon: typeof import('@fa/ui')['FaSvgIcon']
+    IconLocalLogo: typeof import('~icons/local/logo')['default']
     LangSwitch: typeof import('./../features/admin/components/common/lang-switch.vue')['default']
     NButton: typeof import('naive-ui')['NButton']
     NCard: typeof import('naive-ui')['NCard']
@@ -25,6 +26,8 @@ declare module 'vue' {
     NTooltip: typeof import('naive-ui')['NTooltip']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
+    SystemLogo: typeof import('./../features/admin/components/custom/system-logo.vue')['default']
     ThemeSchemaSwitch: typeof import('./../features/admin/components/common/theme-schema-switch.vue')['default']
+    WaveBg: typeof import('./../features/admin/components/custom/wave-bg.vue')['default']
   }
 }

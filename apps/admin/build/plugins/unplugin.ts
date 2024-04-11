@@ -4,6 +4,7 @@ import type { PluginOption } from 'vite';
 import AutoImport from "unplugin-auto-import/vite"; // API按需导入
 import { VueRouterAutoImports } from "unplugin-vue-router"; // API按需导入-router
 import Icons from "unplugin-icons/vite"; // Icon图标按需导入
+import IconsResolver from 'unplugin-icons/resolver'; // Icon图标自动导入
 import { FileSystemIconLoader } from "unplugin-icons/loaders"; // Icon图标按需导入
 import Components from "unplugin-vue-components/vite"; // 组件按需导入
 import { NaiveUiResolver } from "unplugin-vue-components/resolvers"; // 组件按需导入-NaiveUi解析器
@@ -61,6 +62,7 @@ export function setupUnplugin(viteEnv: Env.ImportMeta) {
             return { name, from: '@fa/ui' }
         },
         NaiveUiResolver(),
+        IconsResolver({ customCollections: [collectionName], prefix: VITE_ICON_PREFIX }),
       ],
     }), // 组件按需引入，配置后，dirs目录中的组件会被自动按需引入
     createSvgIconsPlugin({

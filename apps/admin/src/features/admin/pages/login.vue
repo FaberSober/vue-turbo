@@ -1,14 +1,8 @@
 <script setup lang="ts">
-import type { Component } from 'vue';
 import { getColorPalette, mixColor } from '@fa/utils';
 import { $t } from '@/locales';
 import { useAppStore } from '@f/admin/stores/app';
 import { useThemeStore } from '@f/admin/stores/theme';
-
-interface Props {
-  /** The login module */
-  module?: UnionKey.LoginModule;
-}
 
 const appStore = useAppStore();
 const themeStore = useThemeStore();

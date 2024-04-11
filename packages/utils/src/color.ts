@@ -2,6 +2,7 @@ import { colord, extend } from 'colord';
 import namesPlugin from 'colord/plugins/names';
 import mixPlugin from 'colord/plugins/mix';
 import type { AnyColor, HsvColor, RgbColor } from 'colord';
+import type { RgbaColor } from 'colord/types';
 
 extend([namesPlugin, mixPlugin]);
 
@@ -11,7 +12,7 @@ extend([namesPlugin, mixPlugin]);
  * @param color - Color
  * @param alpha - Alpha (0 - 1)
  */
-export function addColorAlpha(color: string, alpha: number) {
+export function addColorAlpha(color: string, alpha: number): string {
   return colord(color).alpha(alpha).toHex();
 }
 
@@ -22,7 +23,7 @@ export function addColorAlpha(color: string, alpha: number) {
  * @param secondColor - Second color
  * @param ratio - The ratio of the second color (0 - 1)
  */
-export function mixColor(firstColor: string, secondColor: string, ratio: number) {
+export function mixColor(firstColor: string, secondColor: string, ratio: number): string {
   return colord(firstColor).mix(secondColor, ratio).toHex();
 }
 
@@ -33,13 +34,13 @@ export function mixColor(firstColor: string, secondColor: string, ratio: number)
  * @param alpha - Alpha (0 - 1)
  * @param bgColor - Background color (usually white or black)
  */
-export function transformColorWithOpacity(color: string, alpha: number, bgColor = '#ffffff') {
+export function transformColorWithOpacity(color: string, alpha: number, bgColor = '#ffffff'): string {
   const originColor = addColorAlpha(color, alpha);
   const { r: oR, g: oG, b: oB } = colord(originColor).toRgb();
 
   const { r: bgR, g: bgG, b: bgB } = colord(bgColor).toRgb();
 
-  function calRgb(or: number, bg: number, al: number) {
+  function calRgb(or: number, bg: number, al: number): number {
     return bg + (or - bg) * al;
   }
 
@@ -57,7 +58,7 @@ export function transformColorWithOpacity(color: string, alpha: number, bgColor 
  *
  * @param color - Color
  */
-export function isWhiteColor(color: string) {
+export function isWhiteColor(color: string): boolean {
   return colord(color).isEqual('#ffffff');
 }
 
@@ -66,7 +67,7 @@ export function isWhiteColor(color: string) {
  *
  * @param color - Color
  */
-export function getRgbOfColor(color: string) {
+export function getRgbOfColor(color: string): RgbaColor {
   return colord(color).toRgb();
 }
 
@@ -169,7 +170,7 @@ export function getColorPalettes(color: AnyColor, darkTheme = false, darkThemeMi
  * @param i - The relative distance from 6
  * @param isLight - Is light color
  */
-function getHue(hsv: HsvColor, i: number, isLight: boolean) {
+function getHue(hsv: HsvColor, i: number, isLight: boolean): number {
   let hue: number;
 
   const hsvH = Math.round(hsv.h);
@@ -198,7 +199,7 @@ function getHue(hsv: HsvColor, i: number, isLight: boolean) {
  * @param i - The relative distance from 6
  * @param isLight - Is light color
  */
-function getSaturation(hsv: HsvColor, i: number, isLight: boolean) {
+function getSaturation(hsv: HsvColor, i: number, isLight: boolean): number {
   if (hsv.h === 0 && hsv.s === 0) {
     return hsv.s;
   }
@@ -235,7 +236,7 @@ function getSaturation(hsv: HsvColor, i: number, isLight: boolean) {
  * @param i - The relative distance from 6
  * @param isLight - Is light color
  */
-function getValue(hsv: HsvColor, i: number, isLight: boolean) {
+function getValue(hsv: HsvColor, i: number, isLight: boolean): number {
   let value: number;
 
   if (isLight) {
