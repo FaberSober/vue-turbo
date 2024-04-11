@@ -15,7 +15,7 @@ console.log('styles', styles);
 <template>
   <main>
     <h1>Demo - Index</h1>
-    <n-button type="primary">naive-ui</n-button>
+    <NButton type="primary">naive-ui</NButton>
 
     <div class="demo-text">SCSS样式测试</div>
 
@@ -23,13 +23,20 @@ console.log('styles', styles);
 
     <div class="demo-text-global">SCSS样式测试（全局）</div>
 
-    <n-date-picker type="date" />
+    <NDatePicker type="date" />
 
     <FaButton name="hello" />
 
-    <span>使用svg图标</span>
+    <div>使用本地svg图标</div>
     <div class="flex text-100px text-primary">
       <FaSvgIcon local-icon="avatar" />
+    </div>
+
+    <div>使用icon图标库</div>
+    <div class="flex text-100px text-primary">
+      <FaSvgIcon icon="material-symbols:sunny" />
+      <FaSvgIcon icon="material-symbols:nightlight-rounded" />
+      <FaSvgIcon icon="line-md:moon-filled-to-sunny-filled-loop-transition" />
     </div>
   </main>
 </template>

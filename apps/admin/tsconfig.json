@@ -1,11 +1,24 @@
 {
-  "files": [],
-  "references": [
-    {
-      "path": "./tsconfig.node.json"
+  "extends": "@fa/tsconfig/vue.json",
+  "include": ["src/**/*.ts", "src/**/*.vue", "src/**/*.tsx", "build/**/*.ts", "./vite.config.ts", "env.d.ts", "./typed-router.d.ts", "./auto-imports.d.ts"],
+  "exclude": ["src/**/__tests__/*"],
+  "compilerOptions": {
+    "composite": true,
+    "declaration": true,
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["./src/*"],
+      "@f/*": ["./src/features/*"],
     },
-    {
-      "path": "./tsconfig.app.json"
-    }
-  ]
+    "noImplicitAny": false,
+    "allowJs": true,
+    "moduleResolution": "Bundler",
+    "types": [
+      "vite/client",
+      "node",
+      "unplugin-vue-router/client",
+      "unplugin-icons/types/vue",
+      "naive-ui/volar"
+    ],
+  }
 }

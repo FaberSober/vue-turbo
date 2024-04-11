@@ -1,4 +1,5 @@
 /// <reference types="vite/client" />
+/// <reference types="unplugin-icons/types/vue" />
 
 // manual extension of route types
 declare module 'vue-router/auto-routes' {

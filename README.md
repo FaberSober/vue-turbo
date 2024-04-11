@@ -26,7 +26,7 @@ pnpm build
 | unplugin-vue-components             | Vue的按需组件自动导入  | https://github.com/unplugin/unplugin-vue-components    |
 | unplugin-auto-import                | API按需导入            | https://github.com/unplugin/unplugin-auto-import       |
 | unplugin-icons                      | Icon按需导入           | https://github.com/unplugin/unplugin-icons             |
-| @iconify/json                       | Icon图标数据           |                                                        |
+| @iconify/json                       | Icon图标数据           | https://iconify.design/                                |
 | Pinia                               | 状态管理库             | https://pinia.vuejs.org/zh/                            |
 | eslint                              | 代码检查               | https://eslint.org/                                    |
 | stylelint                           | CSS代码检查            | https://stylelint.io/                                  |
