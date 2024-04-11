@@ -33,9 +33,15 @@ export function setupUnplugin(viteEnv: Env.ImportMeta) {
         'vue',
         // 'vue-router', // 使用unplugin-vue-router，需要屏蔽此preset预设项
         VueRouterAutoImports,
-        'pinia',
         // custom
-        '@vueuse/core',
+        {
+          'pinia': ['defineStore'],
+          '@vueuse/core': [
+            'useStorage',
+          ],
+        },
+        // custom
+        // '@vueuse/core',
       ],
       eslintrc: {
         enabled: true, // <-- this

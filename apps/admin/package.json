@@ -9,13 +9,15 @@
     "build": "run-p type-check \"build-only {@}\" --",
     "preview": "vite preview",
     "build-only": "vite build",
-    "type-check": "vue-tsc --noEmit -p tsconfig.app.json --composite false",
+    "type-check": "vue-tsc --noEmit -p tsconfig.json --composite false",
     "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs,.ts,.tsx,.cts,.mts --fix --ignore-path .eslintrcignore",
     "lint-style": "stylelint \"**/*.(css|scss)\""
   },
   "dependencies": {
+    "@fa/axios": "workspace:*",
     "@fa/color-palette": "workspace:*",
     "@fa/core": "workspace:*",
+    "@fa/hooks": "workspace:*",
     "@fa/ui": "workspace:*",
     "@fa/utils": "workspace:*",
     "@iconify/vue": "4.1.1",

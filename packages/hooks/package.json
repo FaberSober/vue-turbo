@@ -1,0 +1,19 @@
+{
+  "name": "@fa/hooks",
+  "version": "1.0.2",
+  "exports": {
+    ".": "./src/index.ts"
+  },
+  "typesVersions": {
+    "*": {
+      "*": ["./src/*"]
+    }
+  },
+  "dependencies": {
+    "@fa/axios": "workspace:*"
+  },
+  "devDependencies": {
+    "vue": "^3.4.21",
+    "@vueuse/core": "^10.9.0"
+  }
+}
