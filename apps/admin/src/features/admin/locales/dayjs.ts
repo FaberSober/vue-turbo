@@ -1,7 +1,7 @@
 import { locale } from 'dayjs';
 import 'dayjs/locale/zh-cn';
 import 'dayjs/locale/en';
-import { localStg } from '@/features/admin/utils/storage';
+import { localStg } from '@f/admin/utils/storage';
 
 /**
  * Set dayjs locale

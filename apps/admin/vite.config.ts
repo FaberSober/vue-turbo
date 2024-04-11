@@ -41,7 +41,7 @@ export default defineConfig((configEnv) => {
     resolve: {
       alias: {
         '@': fileURLToPath(new URL('./src', import.meta.url)),
-        '@admin': fileURLToPath(new URL('./src/features/admin', import.meta.url)),
+        '@f': fileURLToPath(new URL('./src/features', import.meta.url)),
       },
     },
     define: {

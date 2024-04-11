@@ -2,8 +2,8 @@
 import type { Component } from 'vue';
 import { getColorPalette, mixColor } from '@fa/utils';
 import { $t } from '@/locales';
-import { useAppStore } from '@/features/admin/stores/app';
-import { useThemeStore } from '@/features/admin/stores/theme';
+import { useAppStore } from '@f/admin/stores/app';
+import { useThemeStore } from '@f/admin/stores/theme';
 
 interface Props {
   /** The login module */

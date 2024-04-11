@@ -2,7 +2,7 @@
 import { computed } from 'vue';
 import { NConfigProvider, darkTheme } from 'naive-ui';
 import { zhCN, dateZhCN } from 'naive-ui';
-import { useThemeStore } from '@/features/admin/stores/theme';
+import { useThemeStore } from '@f/admin/stores/theme';
 
 defineOptions({
   name: 'App',

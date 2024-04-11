@@ -1,8 +1,8 @@
 import { createApp } from 'vue';
-import '@/features/admin/plugins/assets'; // 引入全局样式
-import { setupDayjs, setupLoading, setupNProgress, setupStore } from '@/features/admin/plugins';
-import { setupRouter } from '@/features/admin/router';
-import { setupI18n } from '@/features/admin/locales';
+import '@f/admin/plugins/assets'; // 引入全局样式
+import { setupDayjs, setupLoading, setupNProgress, setupStore } from '@f/admin/plugins';
+import { setupRouter } from '@f/admin/router';
+import { setupI18n } from '@f/admin/locales';
 import App from './app.vue';
 
 // 通用字体

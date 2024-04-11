@@ -1,6 +1,6 @@
 import { useTitle } from '@vueuse/core';
 import type { Router } from 'vue-router';
-import { $t } from '@/features/admin/locales';
+import { $t } from '@f/admin/locales';
 
 /**
  * create document title guard

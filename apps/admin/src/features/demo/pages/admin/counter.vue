@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import { useCounterStore } from '@/features/demo/stores/counter';
+import { useCounterStore } from '@f/demo/stores/counter';
 
 const counter = useCounterStore();
 // counter.count++;

@@ -1,5 +1,5 @@
 import { type RemovableRef } from '@vueuse/core';
-import { themeSettings } from '@/features/admin/theme/settings';
+import { themeSettings } from '@f/admin/theme/settings';
 
 /** Theme store */
 export const useThemeStore = defineStore('theme', () => {
