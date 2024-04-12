@@ -23,3 +23,10 @@ definePage({
 });
 </script>
 ```
+
+## 获取路由参数
+
+```typescript
+const route = useRoute();
+console.log('route', route);
+```

@@ -14,6 +14,18 @@ const bgColor = computed(() => {
   const ratio = themeStore.darkMode ? 0.5 : 0.2;
   return mixColor(COLOR_WHITE, themeStore.themeColor, ratio);
 });
+
+const route = useRoute();
+console.log('route', route);
+
+const titleMap = {
+  '/login/pwd-login': 'page.login.pwdLogin.title',
+  '/login/code-login': 'page.login.codeLogin.title',
+  '/login/register': 'page.login.register.title',
+  '/login/reset-pwd': 'page.login.resetPwd.title',
+  '/login/bind-wechat': 'page.login.bindWeChat.title',
+};
+const title = titleMap[route.path];
 </script>
 
 <template>
@@ -40,11 +52,13 @@ const bgColor = computed(() => {
           </div>
         </header>
         <main class="pt-24px">
-          <!--          <h3 class="text-18px text-primary font-medium">{{ $t(activeModule.label) }}</h3>-->
+          <h3 class="text-18px text-primary font-medium">{{ $t(title) }}</h3>
           <div class="pt-24px">
-            <Transition :name="themeStore.page.animateMode" mode="out-in" appear>
-              <RouterView />
-            </Transition>
+            <RouterView v-slot="{ Component }">
+              <Transition :name="themeStore.page.animateMode" mode="out-in" appear>
+                <component :is="Component" />
+              </Transition>
+            </RouterView>
           </div>
         </main>
       </div>
