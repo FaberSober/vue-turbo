@@ -22,6 +22,8 @@ export const useAuthStore = defineStore('auth', () => {
     startLoading();
 
     // TODO fetch login api
+    await promiseTimeout(2000);
+
     // const { data: loginToken, error } = await fetchLogin(userName, password);
     const { data: loginToken, error } = {
       data: {
