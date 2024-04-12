@@ -16,16 +16,15 @@ const bgColor = computed(() => {
 });
 
 const route = useRoute();
-console.log('route', route);
 
-const titleMap = {
-  '/login/pwd-login': 'page.login.pwdLogin.title',
-  '/login/code-login': 'page.login.codeLogin.title',
-  '/login/register': 'page.login.register.title',
-  '/login/reset-pwd': 'page.login.resetPwd.title',
-  '/login/bind-wechat': 'page.login.bindWeChat.title',
+const titleMap: Record<UnionKey.LoginModule, App.I18n.I18nKey> = {
+  'pwd-login': 'page.login.pwdLogin.title',
+  'code-login': 'page.login.codeLogin.title',
+  register: 'page.login.register.title',
+  'reset-pwd': 'page.login.resetPwd.title',
+  'bind-wechat': 'page.login.bindWeChat.title',
 };
-const title = titleMap[route.path];
+const title = titleMap[route.path.replace('/login/', '')] || 'route.route';
 </script>
 
 <template>

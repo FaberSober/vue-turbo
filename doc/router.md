@@ -5,11 +5,7 @@
 ```typescript
 import { useRouter, useRoute } from 'vue-router/auto';
 const router = useRouter();
-router.push('');
-```
-
-```vue
-$router.push('/counter');
+router.push('/admin');
 ```
 
 ## 定义路由meta等参数
