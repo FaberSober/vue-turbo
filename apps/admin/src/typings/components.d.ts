@@ -10,6 +10,7 @@ declare module 'vue' {
     AppProvider: typeof import('./../features/admin/components/common/app-provider.vue')['default']
     ButtonIcon: typeof import('./../features/admin/components/custom/button-icon.vue')['default']
     ExceptionBase: typeof import('./../features/admin/components/common/exception-base.vue')['default']
+    FaAdminLayout: typeof import('@fa/ui')['FaAdminLayout']
     FaButton: typeof import('@fa/ui')['FaButton']
     FaSvgIcon: typeof import('@fa/ui')['FaSvgIcon']
     IconLocalLogo: typeof import('~icons/local/logo')['default']
