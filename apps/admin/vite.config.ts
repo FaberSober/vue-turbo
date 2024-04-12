@@ -47,6 +47,23 @@ export default defineConfig((configEnv) => {
     define: {
       BUILD_TIME: JSON.stringify(buildTime),
     },
+    build: {
+      sourcemap: true,
+      minify: 'esbuild',
+      rollupOptions: {
+        output: {
+          manualChunks: {
+            vue: ['vue', 'vue-router', 'pinia'],
+            naiveui: ['naive-ui'],
+            // echarts: ['echarts'],
+            // lodash: ['lodash'],
+            dayjs: ['dayjs'],
+            // cryptojs: ['crypto-js'],
+            '@icons': ['@iconify/json'],
+          },
+        },
+      },
+    },
     server: {
       open: true,
     },

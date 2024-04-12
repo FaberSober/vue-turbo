@@ -1,4 +1,4 @@
-import { AES } from 'crypto-js';
+import AES from 'crypto-js/aes';
 
 export class Crypto<T extends object> {
   /** Secret */
