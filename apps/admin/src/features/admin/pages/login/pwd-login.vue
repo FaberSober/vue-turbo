@@ -6,10 +6,6 @@ import { useRouterPush } from '@f/admin/hooks/common/router';
 import { useFormRules, useNaiveForm } from '@f/admin/hooks/common/form';
 import { useAuthStore } from '@f/admin/stores/auth';
 
-defineOptions({
-  name: 'PwdLogin',
-});
-
 const authStore = useAuthStore();
 const { toggleLoginModule } = useRouterPush();
 const { formRef, validate } = useNaiveForm();
@@ -48,29 +44,14 @@ interface Account {
   password: string;
 }
 
-const accounts = computed<Account[]>(() => [
-  {
-    key: 'super',
-    label: $t('page.login.pwdLogin.superAdmin'),
-    userName: 'Super',
-    password: '123456',
-  },
-  {
-    key: 'admin',
-    label: $t('page.login.pwdLogin.admin'),
-    userName: 'Admin',
-    password: '123456',
-  },
-  {
-    key: 'user',
-    label: $t('page.login.pwdLogin.user'),
-    userName: 'User',
-    password: '123456',
-  },
-]);
-
-async function handleAccountLogin(account: Account) {
-  await authStore.login(account.userName, account.password);
+const thirdParties = [
+  { type: 'wechat', icon: 'ant-design:wechat-filled' },
+  { type: 'qq', icon: 'ant-design:qq-outlined' },
+  { type: 'alipay', icon: 'ant-design:alipay-outlined' },
+  { type: 'weibo', icon: 'ant-design:weibo-outlined' },
+];
+async function handleAccountLogin(thirdPartyType: string) {
+  window.$message?.warning('not supported yet');
 }
 </script>
 
@@ -107,8 +88,10 @@ async function handleAccountLogin(account: Account) {
       </div>
       <NDivider class="text-14px text-#666 !m-0">{{ $t('page.login.pwdLogin.otherAccountLogin') }}</NDivider>
       <div class="flex-center gap-12px">
-        <NButton v-for="item in accounts" :key="item.key" type="primary" @click="handleAccountLogin(item)">
-          {{ item.label }}
+        <NButton v-for="item in thirdParties" :key="item.type" type="primary" @click="handleAccountLogin(item.type)" circle secondary>
+          <template #icon>
+            <FaSvgIcon :icon="item.icon" />
+          </template>
         </NButton>
       </div>
     </NSpace>
