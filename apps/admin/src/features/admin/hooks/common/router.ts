@@ -42,7 +42,7 @@ export function useRouterPush(inSetup = true) {
   }
 
   async function toHome() {
-    return routerPushByKey('root');
+    return router.push('/admin');
   }
 
   /**
