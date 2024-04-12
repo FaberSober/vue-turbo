@@ -5,5 +5,5 @@
 ### info
 
 ```typescript
-
+window.$message?.warning('not supported yet');
 ```

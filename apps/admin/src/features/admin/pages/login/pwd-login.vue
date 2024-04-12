@@ -2,12 +2,11 @@
 import { computed, reactive } from 'vue';
 import { $t } from '@/locales';
 import { loginModuleRecord } from '@f/admin/constants/app';
-import { useRouterPush } from '@f/admin/hooks/common/router';
 import { useFormRules, useNaiveForm } from '@f/admin/hooks/common/form';
 import { useAuthStore } from '@f/admin/stores/auth';
 
+const router = useRouter();
 const authStore = useAuthStore();
-const { toggleLoginModule } = useRouterPush();
 const { formRef, validate } = useNaiveForm();
 
 interface FormModel {
@@ -16,8 +15,8 @@ interface FormModel {
 }
 
 const model: FormModel = reactive({
-  userName: 'Soybean',
-  password: '123456',
+  userName: 'admin',
+  password: '888888',
 });
 
 const rules = computed<Record<keyof FormModel, App.Global.FormRule[]>>(() => {
@@ -35,13 +34,8 @@ async function handleSubmit() {
   await authStore.login(model.userName, model.password);
 }
 
-type AccountKey = 'super' | 'admin' | 'user';
-
-interface Account {
-  key: AccountKey;
-  label: string;
-  userName: string;
-  password: string;
+function toLoginModule(module: string) {
+  router.push(`/login/${module}`);
 }
 
 const thirdParties = [
@@ -50,7 +44,8 @@ const thirdParties = [
   { type: 'alipay', icon: 'ant-design:alipay-outlined' },
   { type: 'weibo', icon: 'ant-design:weibo-outlined' },
 ];
-async function handleAccountLogin(thirdPartyType: string) {
+
+async function handleThirdPartyLogin(thirdPartyType: string) {
   window.$message?.warning('not supported yet');
 }
 </script>
@@ -68,27 +63,32 @@ async function handleAccountLogin(thirdPartyType: string) {
         :placeholder="$t('page.login.common.passwordPlaceholder')"
       />
     </NFormItem>
+
     <NSpace vertical :size="24">
       <div class="flex-y-center justify-between">
         <NCheckbox>{{ $t('page.login.pwdLogin.rememberMe') }}</NCheckbox>
-        <NButton quaternary @click="toggleLoginModule('reset-pwd')">
+        <NButton quaternary @click="toLoginModule('reset-pwd')">
           {{ $t('page.login.pwdLogin.forgetPassword') }}
         </NButton>
       </div>
+
       <NButton type="primary" size="large" round block :loading="authStore.loginLoading" @click="handleSubmit">
         {{ $t('common.confirm') }}
       </NButton>
+
       <div class="flex-y-center justify-between gap-12px">
-        <NButton class="flex-1" block @click="toggleLoginModule('code-login')">
+        <NButton class="flex-1" block @click="toLoginModule('code-login')">
           {{ $t(loginModuleRecord['code-login']) }}
         </NButton>
-        <NButton class="flex-1" block @click="toggleLoginModule('register')">
+        <NButton class="flex-1" block @click="toLoginModule('register')">
           {{ $t(loginModuleRecord.register) }}
         </NButton>
       </div>
+
+      <!-- third party login -->
       <NDivider class="text-14px text-#666 !m-0">{{ $t('page.login.pwdLogin.otherAccountLogin') }}</NDivider>
       <div class="flex-center gap-12px">
-        <NButton v-for="item in thirdParties" :key="item.type" type="primary" @click="handleAccountLogin(item.type)" circle secondary>
+        <NButton v-for="item in thirdParties" :key="item.type" type="primary" @click="handleThirdPartyLogin(item.type)" circle secondary>
           <template #icon>
             <FaSvgIcon :icon="item.icon" />
           </template>

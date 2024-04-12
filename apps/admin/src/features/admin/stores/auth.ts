@@ -2,7 +2,7 @@ import { promiseTimeout, type RemovableRef } from '@vueuse/core';
 import { useLoading } from '@fa/hooks';
 
 /** auth store */
-export const useAuthStore = defineStore('app', () => {
+export const useAuthStore = defineStore('auth', () => {
   const { loading: loginLoading, startLoading, endLoading } = useLoading();
 
   /**
