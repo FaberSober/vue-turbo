@@ -4,6 +4,7 @@ import { LAYOUT_SCROLL_EL_ID } from '@fa/ui';
 import { useAppStore } from '@f/admin/stores/app';
 import { useThemeStore } from '@f/admin/stores/theme';
 import GlobalHeader from '../modules/global-header/index.vue';
+import GlobalSider from '../modules/global-sider/index.vue';
 import GlobalTab from '../modules/global-tab/index.vue';
 import { setupMixMenuContext } from '../context';
 
@@ -109,7 +110,7 @@ setupMixMenuContext();
       <GlobalTab />
     </template>
     <template #sider>
-      <div>sider</div>
+      <GlobalSider />
     </template>
     <RouterView />
     <template #footer>
