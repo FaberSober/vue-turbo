@@ -1,4 +1,7 @@
 export const useRouteStore = defineStore('route', () => {
+  /** Global menus */
+  const menus = ref<App.Global.Menu[]>([]);
+
   /** Init auth route */
   async function initAuthRoute() {
     // if (authRouteMode.value === 'static') {
@@ -23,6 +26,7 @@ export const useRouteStore = defineStore('route', () => {
   }
 
   return {
+    menus,
     initAuthRoute,
     resetStore,
   };

@@ -1,6 +1,6 @@
 import { createApp } from 'vue';
 import '@f/admin/plugins/assets'; // 引入全局样式
-import { setupDayjs, setupLoading, setupNProgress, setupStore } from '@f/admin/plugins';
+import { setupDayjs, setupLoading, setupNProgress, setupIconifyOffline, setupStore } from '@f/admin/plugins';
 import { setupRouter } from '@f/admin/router';
 import { setupI18n } from '@f/admin/locales';
 import App from './app.vue';
@@ -13,6 +13,7 @@ import App from './app.vue';
 async function setupApp() {
   setupLoading();
   setupNProgress();
+  setupIconifyOffline();
   setupDayjs();
 
   const app = createApp(App);
