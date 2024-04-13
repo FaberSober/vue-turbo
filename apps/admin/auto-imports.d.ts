@@ -60,6 +60,7 @@ declare global {
   const useRouter: typeof import('vue-router/auto')['useRouter']
   const useSlots: typeof import('vue')['useSlots']
   const useStorage: typeof import('@vueuse/core')['useStorage']
+  const useTitle: typeof import('@vueuse/core')['useTitle']
   const watch: typeof import('vue')['watch']
   const watchEffect: typeof import('vue')['watchEffect']
   const watchPostEffect: typeof import('vue')['watchPostEffect']

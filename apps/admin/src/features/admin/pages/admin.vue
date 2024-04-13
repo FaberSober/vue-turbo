@@ -1,19 +1,7 @@
-<script lang="ts" setup></script>
+<script lang="ts" setup>
+import BaseLayout from '@f/admin/layout/base-layout.vue';
+</script>
 
 <template>
-  <FaAdminLayout>
-    <template #header>
-      <div>header</div>
-    </template>
-    <template #tab>
-      <div>tab</div>
-    </template>
-    <template #sider>
-      <div>sider</div>
-    </template>
-    <RouterView />
-    <template #footer>
-      <div>footer</div>
-    </template>
-  </FaAdminLayout>
+  <BaseLayout />
 </template>

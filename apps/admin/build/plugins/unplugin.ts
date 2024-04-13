@@ -37,7 +37,7 @@ export function setupUnplugin(viteEnv: Env.ImportMeta) {
         {
           'pinia': ['defineStore'],
           '@vueuse/core': [
-            'useStorage',
+            'useStorage', 'useTitle',
           ],
         },
         // custom
