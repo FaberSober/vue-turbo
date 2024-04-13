@@ -14,6 +14,7 @@
     "lint-style": "stylelint \"**/*.(css|scss)\""
   },
   "dependencies": {
+    "clipboard": "2.0.11",
     "@better-scroll/core": "2.5.1",
     "@fa/axios": "workspace:*",
     "@fa/color-palette": "workspace:*",

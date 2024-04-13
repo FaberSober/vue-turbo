@@ -1,13 +1,94 @@
+import type { RouteRecordRaw } from 'vue-router';
 import { router } from '@f/admin/router';
-import { getSelectedMenuKeyPathByKey, getBreadcrumbsByRoute, transformMenuToSearchMenus } from './shared';
+import { useAppStore } from '../app';
+import { useAuthStore } from '../auth';
+import { useTabStore } from '../tab';
+import {
+  filterAuthRoutesByRoles,
+  getBreadcrumbsByRoute,
+  getCacheRouteNames,
+  getGlobalMenusByAuthRoutes,
+  getSelectedMenuKeyPathByKey,
+  isRouteExistByRouteName,
+  sortRoutesByOrder,
+  transformMenuToSearchMenus,
+  updateLocaleOfGlobalMenus,
+} from './shared';
 
+/**
+ * Route store
+ */
 export const useRouteStore = defineStore('route', () => {
+  const appStore = useAppStore();
+  const authStore = useAuthStore();
+  const tabStore = useTabStore();
+
   /** Global menus */
   const menus = ref<App.Global.Menu[]>([]);
   const searchMenus = computed(() => transformMenuToSearchMenus(menus.value));
 
   /** Global breadcrumbs */
   const breadcrumbs = computed(() => getBreadcrumbsByRoute(router.currentRoute.value, menus.value));
+
+  /** Cache routes */
+  const cacheRoutes = ref<FaRouter.RouteKey[]>([]);
+
+  /**
+   * Get cache routes
+   *
+   * @param routes Vue routes
+   */
+  function getCacheRoutes(routes: RouteRecordRaw[]) {
+    cacheRoutes.value = getCacheRouteNames(routes);
+  }
+
+  /**
+   * Add cache routes
+   *
+   * @param routeKey
+   */
+  function addCacheRoutes(routeKey: FaRouter.RouteKey) {
+    if (cacheRoutes.value.includes(routeKey)) return;
+
+    cacheRoutes.value.push(routeKey);
+  }
+
+  /**
+   * Remove cache routes
+   *
+   * @param routeKey
+   */
+  function removeCacheRoutes(routeKey: FaRouter.RouteKey) {
+    const index = cacheRoutes.value.findIndex((item) => item === routeKey);
+
+    if (index === -1) return;
+
+    cacheRoutes.value.splice(index, 1);
+  }
+
+  /**
+   * Re cache routes by route key
+   *
+   * @param routeKey
+   */
+  async function reCacheRoutesByKey(routeKey: FaRouter.RouteKey) {
+    removeCacheRoutes(routeKey);
+
+    await appStore.reloadPage();
+
+    addCacheRoutes(routeKey);
+  }
+
+  /**
+   * Re cache routes by route keys
+   *
+   * @param routeKeys
+   */
+  async function reCacheRoutesByKeys(routeKeys: FaRouter.RouteKey[]) {
+    for await (const key of routeKeys) {
+      await reCacheRoutesByKey(key);
+    }
+  }
 
   /** Init auth route */
   async function initAuthRoute() {
@@ -61,5 +142,9 @@ export const useRouteStore = defineStore('route', () => {
     getSelectedMenuKeyPath,
     getSelectedMenuMetaByKey,
     breadcrumbs,
+    // --------- cache routes ---------
+    cacheRoutes,
+    reCacheRoutesByKey,
+    reCacheRoutesByKeys,
   };
 });

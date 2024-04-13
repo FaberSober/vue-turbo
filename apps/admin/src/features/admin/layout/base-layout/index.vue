@@ -6,6 +6,8 @@ import { useThemeStore } from '@f/admin/stores/theme';
 import GlobalHeader from '../modules/global-header/index.vue';
 import GlobalSider from '../modules/global-sider/index.vue';
 import GlobalTab from '../modules/global-tab/index.vue';
+import GlobalContent from '../modules/global-content/index.vue';
+import ThemeDrawer from '../modules/theme-drawer/index.vue';
 import { setupMixMenuContext } from '../context';
 
 defineOptions({
@@ -112,7 +114,8 @@ setupMixMenuContext();
     <template #sider>
       <GlobalSider />
     </template>
-    <RouterView />
+    <GlobalContent />
+    <ThemeDrawer />
     <template #footer>
       <div>footer</div>
     </template>
