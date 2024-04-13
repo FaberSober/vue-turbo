@@ -1,4 +1,8 @@
 <script lang="ts" setup>
 const router = useRouter();
-router.push('/login/pwd-login');
+router.replace('/login/pwd-login');
 </script>
+
+<template>
+  <div></div>
+</template>

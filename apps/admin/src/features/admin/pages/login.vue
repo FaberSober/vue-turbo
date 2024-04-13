@@ -24,7 +24,7 @@ const titleMap: Record<UnionKey.LoginModule, App.I18n.I18nKey> = {
   'reset-pwd': 'page.login.resetPwd.title',
   'bind-wechat': 'page.login.bindWeChat.title',
 };
-const title = titleMap[route.path.replace('/login/', '')] || 'route.route';
+const title = titleMap[route.path.replace('/login/', '')] || 'route.login';
 </script>
 
 <template>
