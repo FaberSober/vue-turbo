@@ -7,6 +7,7 @@ import GlobalHeader from '../modules/global-header/index.vue';
 import GlobalSider from '../modules/global-sider/index.vue';
 import GlobalTab from '../modules/global-tab/index.vue';
 import GlobalContent from '../modules/global-content/index.vue';
+import GlobalFooter from '../modules/global-footer/index.vue';
 import ThemeDrawer from '../modules/theme-drawer/index.vue';
 import { setupMixMenuContext } from '../context';
 
@@ -117,7 +118,7 @@ setupMixMenuContext();
     <GlobalContent />
     <ThemeDrawer />
     <template #footer>
-      <div>footer</div>
+      <GlobalFooter />
     </template>
   </FaAdminLayout>
 </template>
