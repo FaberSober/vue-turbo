@@ -16,6 +16,8 @@
     "nanoid": "5.0.6"
   },
   "devDependencies": {
+    "@fa/eslint-config-custom": "workspace:*",
+    "@fa/tsconfig": "workspace:*",
     "@types/crypto-js": "4.2.2"
   }
 }

@@ -3,6 +3,7 @@ import { computed, onMounted, ref } from 'vue';
 import Clipboard from 'clipboard';
 import { $t } from '@/locales';
 import { useThemeStore } from '@f/admin/stores/theme';
+import { FaUtils } from '@fa/utils';
 
 defineOptions({
   name: 'ConfigOperation',

@@ -39,6 +39,7 @@ export function setupUnplugin(viteEnv: Env.ImportMeta) {
           '@vueuse/core': [
             'useStorage', 'useTitle',
           ],
+          '@fa/utils': ['FaUtils'],
         },
         // custom
         // '@vueuse/core',

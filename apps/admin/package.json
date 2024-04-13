@@ -17,7 +17,6 @@
     "@better-scroll/core": "2.5.1",
     "@fa/axios": "workspace:*",
     "@fa/color-palette": "workspace:*",
-    "@fa/core": "workspace:*",
     "@fa/hooks": "workspace:*",
     "@fa/ui": "workspace:*",
     "@fa/utils": "workspace:*",
