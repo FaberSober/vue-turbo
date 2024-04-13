@@ -192,9 +192,9 @@ declare namespace App {
        */
       oldLabel?: string;
       /** The tab route key */
-      // routeKey: LastLevelRouteKey;
+      routeKey: FaRouter.RouteKey;
       /** The tab route path */
-      // routePath: RouteMap[LastLevelRouteKey];
+      routePath: FaRouter.RoutePath;
       /** The tab route full path */
       fullPath: string;
       /** The tab fixed index */

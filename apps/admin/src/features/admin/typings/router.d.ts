@@ -1,6 +1,8 @@
 declare namespace FaRouter {
   import type { RouteNamedMap } from "vue-router/auto-routes";
 
+  type RouteNamedMap = RouteNamedMap;
+
   /**
    * route key
    */
