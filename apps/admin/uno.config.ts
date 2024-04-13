@@ -2,7 +2,7 @@ import { defineConfig } from 'unocss/vite';
 import { transformerDirectives, transformerVariantGroup, presetUno } from 'unocss';
 import type { Theme } from 'unocss/preset-uno';
 import { presetSoybeanAdmin } from '@fa/uno-preset';
-// import { themeVars } from './src/theme/vars';
+import { themeVars } from './src/features/admin/theme/vars';
 
 export default defineConfig<Theme>({
   content: {
@@ -11,7 +11,7 @@ export default defineConfig<Theme>({
     },
   },
   theme: {
-    // ...themeVars,
+    ...themeVars,
     fontSize: {
       'icon-xs': '0.875rem',
       'icon-small': '1rem',

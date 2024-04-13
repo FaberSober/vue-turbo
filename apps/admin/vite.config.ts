@@ -28,6 +28,12 @@ export default defineConfig((configEnv) => {
         // brotliSize: true,
       }), // 打包依赖图
     ],
+    resolve: {
+      alias: {
+        '@': fileURLToPath(new URL('./src', import.meta.url)),
+        '@f': fileURLToPath(new URL('./src/features', import.meta.url)),
+      },
+    },
     //* css模块化
     css: {
       modules: {
@@ -37,11 +43,10 @@ export default defineConfig((configEnv) => {
         hashPrefix: 'prefix',
         localsConvention: 'camelCaseOnly',
       },
-    },
-    resolve: {
-      alias: {
-        '@': fileURLToPath(new URL('./src', import.meta.url)),
-        '@f': fileURLToPath(new URL('./src/features', import.meta.url)),
+      preprocessorOptions: {
+        scss: {
+          additionalData: `@use "./src/features/admin/styles/scss/global.scss" as *;`,
+        },
       },
     },
     define: {
