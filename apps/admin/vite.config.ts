@@ -36,13 +36,13 @@ export default defineConfig((configEnv) => {
     },
     //* css模块化
     css: {
-      modules: {
-        scopeBehaviour: 'local',
-        generateScopedName: '[name]__[local]___[hash:base64:5]',
-        // globalModulePaths: [/\.global\.(css|scss)$/],
-        hashPrefix: 'prefix',
-        localsConvention: 'camelCaseOnly',
-      },
+      // modules: {
+      //   scopeBehaviour: 'local',
+      //   generateScopedName: '[name]__[local]___[hash:base64:5]',
+      //   // globalModulePaths: [/\.global\.(css|scss)$/],
+      //   hashPrefix: 'prefix',
+      //   localsConvention: 'camelCaseOnly',
+      // },
       preprocessorOptions: {
         scss: {
           additionalData: `@use "./src/features/admin/styles/scss/global.scss" as *;`,
