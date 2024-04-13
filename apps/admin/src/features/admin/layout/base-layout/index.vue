@@ -3,6 +3,8 @@ import type { LayoutMode } from '@fa/ui';
 import { LAYOUT_SCROLL_EL_ID } from '@fa/ui';
 import { useAppStore } from '@f/admin/stores/app';
 import { useThemeStore } from '@f/admin/stores/theme';
+import GlobalHeader from '../modules/global-header/index.vue';
+import { setupMixMenuContext } from '../context';
 
 defineOptions({
   name: 'BaseLayout',
@@ -75,6 +77,8 @@ function getSiderCollapsedWidth() {
 
   return w;
 }
+
+setupMixMenuContext();
 </script>
 
 <template>
@@ -98,7 +102,7 @@ function getSiderCollapsedWidth() {
     :right-footer="themeStore.footer.right"
   >
     <template #header>
-      <div>header</div>
+      <GlobalHeader v-bind="headerProps" />
     </template>
     <template #tab>
       <div>tab</div>

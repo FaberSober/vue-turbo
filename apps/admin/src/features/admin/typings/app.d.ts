@@ -156,9 +156,9 @@ declare namespace App {
       /** The menu i18n key */
       i18nKey?: I18n.I18nKey;
       /** The route key */
-      // routeKey: RouteKey;
+      routeKey: FaRouter.RouteKey;
       /** The route path */
-      // routePath: RoutePath;
+      routePath: FaRouter.RoutePath;
       /** The menu icon */
       icon?: () => VNode;
       /** The menu children */

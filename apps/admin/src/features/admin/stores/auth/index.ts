@@ -11,6 +11,11 @@ export const useAuthStore = defineStore('auth', () => {
   const { route, toLogin, redirectFromLogin } = useRouterPush(false);
   const { loading: loginLoading, startLoading, endLoading } = useLoading();
 
+  const token = ref(getToken());
+  const userInfo: Api.Auth.UserInfo = reactive(getUserInfo());
+  /** Is login */
+  const isLogin = computed(() => Boolean(token.value));
+
   /**
    * Login
    *
@@ -76,5 +81,7 @@ export const useAuthStore = defineStore('auth', () => {
     loginLoading,
     login,
     resetStore,
+    isLogin,
+    userInfo,
   };
 });

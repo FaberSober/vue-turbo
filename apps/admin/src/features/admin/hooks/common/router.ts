@@ -22,7 +22,7 @@ export function useRouterPush(inSetup = true) {
     params?: Record<string, string>;
   }
 
-  async function routerPushByKey(key: string, options?: RouterPushOptions) {
+  async function routerPushByKey(key: FaRouter.RouteKey, options?: RouterPushOptions) {
     const { query, params } = options || {};
 
     // const routeLocation: RouteLocationRaw = { // FIXME 这里的ts类型有问题
